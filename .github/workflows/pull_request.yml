@@ -57,6 +57,84 @@ jobs:
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
       dockerfiles_changed: steps.verify-changed-files.outputs.files_changed
 
+
+  gcloud_auth:
+    name: Authenticate to Google Cloud
+    runs-on: ubuntu-latest
+    container:
+      image: jhudsl/stats-for-genomics:0.9
+  
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+  
+    steps:
+      - uses: 'actions/checkout@v3'
+
+      # # See https://github.com/google-github-actions/auth
+      # - id: 'auth'
+      #   name: 'Authenticate to Google Cloud'
+      #   uses: 'google-github-actions/auth@v0'
+      #   with:
+      #     workload_identity_provider: ${{ secrets.GCP_WIP }}
+      #     service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      # Note that workload identity fed approach is preferred! 
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      # 
+      # - name: 'Set up Cloud SDK'
+      #   uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Confirm gcloud CLI status'
+        run: 'gcloud info'
+        
+      - id: 'gcloud'
+        name: 'gcloud'
+        run: |
+          gsutil cp README.md ${{ secrets.GOOGLE_BUCKET }}
+        
+      # # Set up git checkout
+      # - name: Set up git checkout
+      #   run: |
+      #     git config --local user.email "itcrtrainingnetwork@gmail.com"
+      #     git config --local user.name "jhudsl-robot"
+      # 
+      #     branch_name='preview-${{ github.event.pull_request.number }}'
+      #     git fetch --all
+      #     git checkout $branch_name
+      #     git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
+      #   shell: bash
+      
+      # - name: "Install notedown"
+      #   run: pip3 install notedown
+      #   
+      # - name: "Configure notedown"
+      #   run: |
+      #     # Add to PATH
+      #     existing_path <- Sys.getenv("PATH")
+      #     notedown_path <- "~/.local/bin"
+      #     Sys.setenv(PATH = paste(existing_path, notedown_path, sep = ":"))
+      #     
+      #     # Confirm notedown is accessible
+      #     system2("notedown", "--version")
+      #   shell: Rscript {0}
+      #   
+      # - name: 'Install R packages'
+      #   run: |
+      #     install.packages(c("here", "futile.logger", "rapiclient"))
+      #     install.packages("https://bioconductor.org/packages/release/bioc/src/contrib/AnVIL_1.8.5.tar.gz", repos = NULL, type = "source")
+      #     packageVersion("AnVIL")
+      #   shell: Rscript {0}
+      #   
+      # - name: 'Push to AnVIL'
+      #   run: Rscript --vanilla "scripts/anvil_push.R" --repository "jhudsl/AnVIL_Template" --namespace "anvil-outreach" --name "Learn_AnVIL_on_AnVIL"
+
   anvil-library-build:
     name: AnVIL Library Build
     needs: yaml-check
