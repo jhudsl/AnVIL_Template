@@ -1,7 +1,7 @@
 chapter_name: "Chapter "
 repo: https://github.com/jhudsl/AnVIL_Template/
 rmd_files: ["index.Rmd",
-            "09-student_guide.Rmd",
+            "student-guide.Rmd",
             "References.Rmd"]
 new_session: yes
 bibliography: [book.bib]
