@@ -18,7 +18,7 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 google-cloud-sdk/install.sh
 ```
 
-**Step 2:** Initialize `glcoud`. You might need to specify the path to the executable `gcloud`, e.g., `google-cloud-sdk/bin/gcloud init`.
+**Step 2:** Initialize `gcloud`. You might need to specify the path to the executable `gcloud`, e.g., `google-cloud-sdk/bin/gcloud init`.
 
 ```
 gcloud init
