@@ -18,6 +18,9 @@ print-out-session-info
 anvil-module-library
 include-using-cowborrow_chapter
 background-highlighting-for-borrowed-chapters
+student-guide
+activity-one
+activity-two
 workspaces
 clone-a-workspace
 create-a-workspace
