@@ -58,6 +58,10 @@ group:
       jhudsl/GDSCN_Book_Statistics_for_Genomics_RNA-seq
       jhudsl/GDSCN_Book_Statistics_for_Genomics_scRNA-seq
       jhudsl/GDSCN_Book_swirl
+      fhdsl/Data_on_AnVIL
+      fhdsl/AnVIL_Researcher_Journey
+      fhdsl/AnVIL_Data_Subsetting
+      fhdsl/GDSCN_BioDIGS_BGC
 ###ADD NEW REPO HERE following the format above#
 
 # AnVIL repos should sync AnVIL version of _output.yml
@@ -89,6 +93,7 @@ group:
       fhdsl/GDSCN_BioDIGS_Soil
       fhdsl/GDSCN_SARS_RStudio_on_AnVIL
       jhudsl/GDSCN_Template_Test
+      fhdsl/GDSCN_BioDIGS_BGC
 
 # Repos where Hopkins took the lead have JHU branding instead of Hutch
   - files:

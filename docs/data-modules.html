@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Onboarding | AnVIL Book Name</title>
+  <title>Chapter 8 Data modules | AnVIL Book Name</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Onboarding | AnVIL Book Name" />
+  <meta property="og:title" content="Chapter 8 Data modules | AnVIL Book Name" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Description about Course/Book." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Onboarding | AnVIL Book Name" />
+  <meta name="twitter:title" content="Chapter 8 Data modules | AnVIL Book Name" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/AnVIL_style/anvil_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="billing.html"/>
-<link rel="next" href="using-programming-platforms-on-anvil.html"/>
+<link rel="prev" href="using-programming-platforms-on-anvil.html"/>
+<link rel="next" href="student-instructions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -325,14 +325,48 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/AnVIL_style/dasl_thin_main_image.png">
 </div>
-<div id="onboarding" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Onboarding<a href="onboarding.html#onboarding" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Joining a team on AnVIL.</p>
+<div id="data-modules" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Data modules<a href="data-modules.html#data-modules" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Modules aimed importing and managing data on AnVIL.</p>
 <p><br></p>
-<div id="create-google-account" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Create Google Account<a href="onboarding.html#create-google-account" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you do not already have a Google account that you would like to use for accessing Terra, <a href="https://accounts.google.com/SignUp">create one now</a>.</p>
-<p>If you would like to create a Google account that is associated with your non-Gmail, institutional email address, follow <a href="https://support.terra.bio/hc/en-us/articles/360029186611">these instructions</a>.</p>
+<div id="getting-data-from-hpc-to-anvil" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Getting Data from HPC to AnVIL<a href="data-modules.html#getting-data-from-hpc-to-anvil" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="borrowed_chunk">
+<p>If you’re used to working on High Performance Computing (HPC, or “on-premises” institutional servers) you’ll likely need to transfer files from your HPC to AnVIL. You can check out <a href="https://support.terra.bio/hc/en-us/articles/10206456029083-How-to-install-gcloud-on-a-local-machine">this Terra documentation</a> for the most recent information on installing Google Cloud SDK. There’s also great documentation about moving data to/from Google buckets <a href="https://support.terra.bio/hc/en-us/articles/4409101169051-How-to-move-data-to-from-a-Google-bucket">here</a>.</p>
+<p>You will need to:</p>
+<ol style="list-style-type: decimal">
+<li><p>Install Google Cloud SDK (<code>gcloud</code>) on your server</p></li>
+<li><p>“Initialize” <code>glcoud</code> and authenticate with your Google account</p></li>
+<li><p>Connect to your Workspace</p></li>
+<li><p>Transfer files</p></li>
+</ol>
+<p><strong>Step 1:</strong> Install Google Cloud SDK on your server. This is software that enables file transfer. The code here is an example specifically for a Linux server. You might need to follow different instructions <a href="https://cloud.google.com/sdk/docs/install">depending on your server setup</a>.</p>
+<pre><code>curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-linux-x86_64.tar.gz
+google-cloud-sdk/install.sh</code></pre>
+<p><strong>Step 2:</strong> Initialize <code>gcloud</code>. You might need to specify the path to the executable <code>gcloud</code>, e.g., <code>google-cloud-sdk/bin/gcloud init</code>.</p>
+<pre><code>gcloud init</code></pre>
+<p>You will be asked to copy and paste a long link in your browser. Enter the authorization code to confirm Google Cloud SDK access.</p>
+<pre><code>Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?response....
+    
+Enter authorization code:</code></pre>
+<p><strong>Step 3:</strong> Connect to your Workspace. You will see a message like this:</p>
+<pre><code>This account has a lot of projects! Listing them all can take a while.
+ [1] Enter a project ID
+ [2] Create a new project
+ [3] List projects
+Please enter your numeric choice:</code></pre>
+<p>Select <code>1</code> to enter your Workspace’s Google Project ID. You can find this by opening your Workspace and viewing the Dashboard tab. It will look something like <code>terra-123abcefg</code>. Confirm you are in the right place by typing in the following. The command should return the Bucket name.</p>
+<pre><code>gcloud storage ls</code></pre>
+<p><strong>Step 4:</strong> Transfer files. Now you’re ready to copy data over! Use the command below, replacing the <code>/data/user_name/data_folder</code> with the directory on your server, and replacing <code>gs://fc-a1b2c3</code> with your Bucket name.</p>
+<ul>
+<li>You can find the Bucket name by entering <code>gcloud storage ls</code> or checking the Workspace and viewing the Dashboard tab.</li>
+<li>Note that the <code>-r</code> flag is “recursive”, which means all files in that directory will be moved over.</li>
+</ul>
+<pre><code>gcloud storage cp -r /data/user_name/data_folder gs://fc-a1b2c3</code></pre>
+</div>
 
 </div>
 </div>
@@ -349,8 +383,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="billing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="using-programming-platforms-on-anvil.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="using-programming-platforms-on-anvil.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="student-instructions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
