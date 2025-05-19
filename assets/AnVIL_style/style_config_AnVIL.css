@@ -7,6 +7,6 @@ any variables listed in style_config_default.css can be overridden by giving the
 :root {
   --link-color: #035C94;
   --accent-color: #012840;   /* book title, first letter of chapter, toc text */
-  --highlight-color: #7EBAC0;   /* toc highlight, callout box borders */
+  --highlight-color: #035C94;   /* toc highlight, callout box borders */
   }
 
