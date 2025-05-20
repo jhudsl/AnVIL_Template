@@ -1,15 +1,15 @@
 
-/* AnVIL style */
-/* Things below this comment are AnVIL customizations */
+/* AnVIL_Template style */
+/* Customizations to add to and/or override OTTR css (assets/style.css)  */
 
 .trapezoid {
   width: 132px;
   text-align: center;
   position: relative;
     left: 10px;
-  border-right: 50px solid #012d72;
+  border-right: 50px solid var(--accent-color);
   border-bottom: 50px solid #dbdbdb;
-  border-left: 50px solid #012d72;
+  border-left: 50px solid var(--accent-color);
   box-sizing: content-box;
 }
 .trapezoid span {
