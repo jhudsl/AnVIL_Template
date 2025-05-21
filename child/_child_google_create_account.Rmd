@@ -1,7 +1,7 @@
 ::: {.warning}
 #### Controlled-Access Data {-}
 
-To comply with NIH data security requirements, **unaffiliated email accounts (such as gmail.com) CANNOT be given access to Controlled-Access Data**. If you will be working with Controlled-Access Data, you should follow the option below to set up a Google account that is associated with your institutional email address.
+To comply with NIH data security requirements, **unaffiliated email accounts (such as gmail.com) CANNOT be given access to Controlled-Access Data**. If you will be working with Controlled-Access Data, you should follow the appropriate option below for using your institutional email address.
 
 #### Transferring Accounts {-}
 
@@ -11,5 +11,5 @@ Note that there is no way for you to transfer your Terra account to a new Google
 There are 3 ways to set up a Google account for use with Terra:
 
 1. **Institutional Google Account**: If your institution uses G Suite, you can sign into Terra directly using your institutional Google account.
-1. **Non-Google Institutional Account**: If your institution does not use G suite, you can create a Google account that is associated with your non-Google institutional email address by following [these instructions](https://support.terra.bio/hc/en-us/articles/360029186611).
+1. **Non-Google Institutional Account**: If your institution does not use G Suite, you can create a Google account that is associated with your non-Google institutional email address by following [these instructions](https://support.terra.bio/hc/en-us/articles/360029186611).
 1. **Unaffiliated Google Account**: You can access Terra with any Google account. If you have an existing Google account (such as gmail.com), you can use it to sign into Terra. If you do not already have a Google account that you would like to use for accessing Terra, [create one now](https://accounts.google.com/SignUp).
