@@ -1,11 +1,9 @@
 ::: {.warning}
-#### Controlled-Access Data
+#### Controlled-Access Data {-}
 
 To comply with NIH data security requirements, **unaffiliated email accounts (such as gmail.com) CANNOT be given access to Controlled-Access Data**. If you will be working with Controlled-Access Data, you should follow the option below to set up a Google account that is associated with your institutional email address.
-:::
 
-::: {.warning}
-#### Transferring Accounts
+#### Transferring Accounts {-}
 
 Note that there is no way for you to transfer your Terra account to a new Google account (if, for example, you change institutions). You will have to set up a new account. So, if you are *not* going to be working with Controlled-Access Data, it may be more convenient to use an unaffiliated gmail account.
 :::
