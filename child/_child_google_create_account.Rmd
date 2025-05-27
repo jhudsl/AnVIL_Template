@@ -6,10 +6,10 @@ Working with Controlled-Access Data (such as GTEx or dbGaP data) **requires** th
 
 There are 2 ways to set up a Google account for use with Terra:
 
-1. **Institutional Account**: using your institutional e-mail
+1. **Institutional Account**: use your institutional e-mail
     - If your institution uses G Suite, you can sign into Terra directly using your institutional Google account.
     - If your institution does not use G Suite, you can create a Google account that is associated with your non-Google institutional email address by following [these instructions](https://support.terra.bio/hc/en-us/articles/360029186611).
-1. **Unaffiliated Google Account**: using a personal account
+1. **Unaffiliated Google Account**: use a personal account
     - If you have an existing Google account (such as gmail.com), you can use it to sign into Terra.
     - If you do not already have a Google account that you would like to use for accessing Terra, [create one now](https://accounts.google.com/SignUp).
 
