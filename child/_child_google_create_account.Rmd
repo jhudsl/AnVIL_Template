@@ -1,5 +1,5 @@
 ::: {.warning}
-#### Choose Your Account Type
+#### Choose Your Account Type {-}
 
 Do you plan to work with **controlled-access data** (e.g. GTEx, dbGaP)?
 
@@ -7,7 +7,7 @@ Do you plan to work with **controlled-access data** (e.g. GTEx, dbGaP)?
 
 Will you be **moving between institutions**?
 
-  - IF YES, you might consider a gmail account. There is no way to transfer a Terra account to a new Google account (e.g. a new institutional email). So, if you are *not* going to be working with Controlled-Access Data, it may be more convenient to use an unaffiliated gmail account.
+  - IF YES, you might consider a gmail account. There is no way to transfer a Terra account to a new Google account (e.g. a new institutional email). So, if you are *not* going to be working with controlled-access data, it may be more convenient to use an unaffiliated gmail account.
 :::
 
 There are 2 ways to set up a Google account for use with Terra:
