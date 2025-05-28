@@ -1,7 +1,13 @@
 ::: {.warning}
-#### Controlled-Access Data {-}
+#### Choose Your Account Type
 
-Working with Controlled-Access Data (such as GTEx or dbGaP data) **requires** that you use an institutional email to comply with NIH data security requirements. Unaffiliated email accounts (such as gmail.com) **CANNOT** be given access. If you will be working with Controlled-Access Data, you should follow the appropriate option below for using your institutional email address.
+Do you plan to work with **controlled-access data** (e.g. GTEx, dbGaP)?
+
+  - IF YES, **you MUST use an institutional email address**. To comply with NIH data security requirements, unaffiliated email accounts (such as gmail.com) CANNOT be given access to controlled-access data.
+
+Will you be **moving between institutions**?
+
+  - IF YES, you might consider a gmail account. There is no way to transfer a Terra account to a new Google account (e.g. a new institutional email). So, if you are *not* going to be working with Controlled-Access Data, it may be more convenient to use an unaffiliated gmail account.
 :::
 
 There are 2 ways to set up a Google account for use with Terra:
@@ -13,8 +19,3 @@ There are 2 ways to set up a Google account for use with Terra:
     - If you have an existing Google account (such as gmail.com), you can use it to sign into Terra.
     - If you do not already have a Google account that you would like to use for accessing Terra, [create one now](https://accounts.google.com/SignUp).
 
-::: {.warning}
-#### Transferring Accounts {-}
-
-Note that there is no way for you to transfer your Terra account to a new Google account (if, for example, you change institutions). You will have to set up a new account. So, if you are *not* going to be working with Controlled-Access Data, it may be more convenient to use an unaffiliated gmail account.
-:::
