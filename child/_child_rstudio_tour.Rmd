@@ -25,6 +25,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. Load the example data.
 
+::: {.notice}
+If you need to load data stored in your workspace or a GCP bucket, 
+you'll need to use the [AnVILGCP package](https://bioconductor.org/packages/release/bioc/vignettes/AnVILGCP/inst/doc/AnVILGCPIntroduction.html)
+to load it into RStudio.
+
+The example in this walkthrough uses data from an imported R package.  
+:::
+
     ```{r, eval = FALSE}
 library(airway)
 data(airway)
