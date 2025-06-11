@@ -21,7 +21,7 @@ There are two ways to "shut down" `r AnVIL_module_settings$cloud_environment` on
     - Make sure you have saved anything you need to another location (such as the Workspace bucket, GitHub, or your local machine) before you delete your environment.
 
 :::{.notice}
-You *can* delete the environment but keep the Persistent Disk (this is like keeping the hard drive while throwing away the rest of the computer). However in practice this is rarely preferable. You will continue to be charged for the Persistent Disk, and the Persistent Disk is both more expensive and less stable than your Workspace bucket storage. Anything that you want to keep long-term should be moved to your Workspace bucket.
+You can **delete the environment but keep the Persistent Disk** (this is like keeping the hard drive while throwing away the rest of the computer). However in practice this is rarely preferable. You will continue to be charged for the Persistent Disk, and the **Persistent Disk is both more expensive and less stable than your Workspace bucket**. Anything that you want to keep long-term should be moved to your Workspace bucket.
 
 Some examples of when you might want to delete the environment but keep the persistent disk:
 
