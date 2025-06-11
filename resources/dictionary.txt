@@ -1,4 +1,5 @@
 AnVIL
+AnVILGCP
 BiocManager
 bioinformatics
 BIPOC
@@ -31,6 +32,8 @@ OTTR
 ottrpal
 plotMDS
 precompiled
+Preconfigure
+preconfigured
 premade
 preprint
 programmatically
@@ -40,6 +43,7 @@ Rmd
 RStudio
 timeframe
 underserved
+walkthrough
 Workspaces
 Workspace's
 www
