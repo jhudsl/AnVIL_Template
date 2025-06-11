@@ -14,7 +14,6 @@ Modules about opening, touring, and closing AnVIL platforms
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "child/_child_jupyter_video.Rmd",
-  branch = "add-details-about-keeping-pd"
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
@@ -140,6 +139,7 @@ These instructions can be customized to a specific cloud environment by setting 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "child/_child_cloud_environment_pause_vs_delete.Rmd",
+  branch = "add-details-about-keeping-pd",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
