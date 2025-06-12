@@ -137,9 +137,17 @@ These instructions can be customized by setting the following variables in `AnVI
 
 ### Generic cloud environment, with PD details
 
+```
+AnVIL_module_settings <- list(include_pd_details = TRUE)
+cow::borrow_chapter(
+  doc_path = "child/_child_cloud_environment_pause_vs_delete.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
+
 :::: {.borrowed_chunk}
-```{r, results='asis'}
-AnVIL_module_settings <- list(include_PD_details = TRUE)
+```{r, echo = FALSE, results='asis'}
+AnVIL_module_settings <- list(include_pd_details = TRUE)
 cow::borrow_chapter(
   doc_path = "child/_child_cloud_environment_pause_vs_delete.Rmd",
   branch = "add-details-about-keeping-pd",
