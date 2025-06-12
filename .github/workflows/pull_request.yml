@@ -56,6 +56,8 @@ jobs:
       toggle_render_preview: "${{ env.RENDER_PREVIEW }}"
       toggle_dictionary_sort: "${{ env.DICTIONARY_SORT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
+      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}"
+      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}"
 
 ########################## Make the error reports ##############################
   ottr-reports:
