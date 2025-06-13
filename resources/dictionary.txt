@@ -9,6 +9,7 @@ Callout
 colData
 CoV
 customizations
+dbGaP
 dex
 dexamethasone
 docx
@@ -18,6 +19,8 @@ github
 Glimma
 glimmaMDS
 Gmail
+gmail
+GTEx
 impactful
 Inclusivity
 Jupyter
