@@ -34,102 +34,21 @@ jobs:
       make_book_txt: "${{ env.MAKE_BOOK_TXT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
       toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
-      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}"
-      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}"
 
   render-course:
     name: Render course preview
     needs: yaml-check
     runs-on: ubuntu-latest
-    container:
-      image: ${{needs.yaml-check.outputs.rendering_docker_image}}
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
+      - name: Run render
+        id: render
+        uses: ottrproject/ottr-preview@main
         with:
-          fetch-depth: 0
+          toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
+          preview: false
           token: ${{ secrets.GH_PAT }}
-
-      - name: Login as github actions bot
-        run: |
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      # We want a fresh run of the renders each time
-      - name: Delete old docs/*
-        run: |
-          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
-          git fetch origin
-          git pull --rebase --allow-unrelated-histories --strategy-option=ours
-
-      # Make sure the link for AnVIL feedback is prepopulated for the specific course
-      - name: Set up feedback link
-        if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'yes'}}
-        run: |
-          bash .github/AnVIL_Feedback_Script.sh
-          git add _output.yml
-          git commit -m 'Set up feedback link' || echo "No changes to commit"
-
-      # Run Rmd rendering
-      - name: Run bookdown render
-        id: bookdown
-        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
-        run: |
-          rm -rf docs/*
-          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all');
-          file.copy(from = 'assets', to = 'docs/assets', overwrite = TRUE)"
-
-      - name: Render quarto version
-        id: quarto
-        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
-        run: Rscript -e "quarto::quarto_render('.')"
-          
-      # Render a student guide if specified. This is a bit clunky because 
-      # Bookdown does not work well if the files aren't named as such in the 
-      # root directory
-      - name: Run student guide render
-        if: ${{needs.yaml-check.outputs.toggle_student_guide == 'yes'}}
-        id: student_guide
-        run: |
-          mkdir tmp1
-          mv _bookdown.yml _output.yml tmp1
-          mv student-guide/_bookdown.yml student-guide/_output.yml .
-          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
-          mv _bookdown.yml _output.yml student-guide
-          mv tmp1/_bookdown.yml tmp1/_output.yml .
-          rm -r tmp1
-          git add student-guide/*
-          git commit -m 'Create student guide' || echo "No changes to commit"
-
-      # This checks on the steps before it and makes sure that they completed.
-      # If the renders didn't complete we don't want to commit the file changes
-      - name: Check on Rmd render steps
-        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
-        run: |
-          echo Bookdown status ${{steps.bookdown.outcome}}
-          if [${{steps.bookdown.outcome}} != 'success']; then
-            exit 1
-          fi
-
-      - name: Check on quarto render steps
-        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
-        run: |
-          echo Quarto status ${{steps.quarto.outcome}}
-          if [${{steps.quarto.outcome}} != 'success']; then
-            exit 1
-          fi
-
-      # Commit the rendered course files
-      - name: Commit rendered course files
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git add --force docs/*
-          git commit -m 'Render course' || echo "No changes to commit"
-          git status docs/*
-          git push --force -u origin main  || echo "No changes to push"
+          docker_image: ${{needs.yaml-check.outputs.rendering_docker_image}}
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
