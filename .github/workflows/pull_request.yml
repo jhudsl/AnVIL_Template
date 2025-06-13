@@ -153,7 +153,7 @@ jobs:
         toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
         docker_image: ${{needs.yaml-check.outputs.rendering_docker_image}}
         
-############################# Render Preview ###################################
+############################# Render AnVIL Special ###################################
   # Do not remove this section with OTTR syncs!
   render-anvil-special:
     name: Render AnVIL Special
