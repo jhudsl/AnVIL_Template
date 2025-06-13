@@ -228,7 +228,7 @@ jobs:
   # Do not remove this section with OTTR syncs!
   render-anvil-special:
     name: Render AnVIL Special
-    needs: render-course
+    needs: [yaml-check, render-course]
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
