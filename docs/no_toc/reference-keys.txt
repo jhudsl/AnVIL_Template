@@ -18,6 +18,9 @@ print-out-session-info
 anvil-module-library
 include-using-cowborrow_chapter
 background-highlighting-for-borrowed-chapters
+student-guide
+activity-one
+activity-two
 workspaces
 clone-a-workspace
 create-a-workspace
@@ -52,6 +55,11 @@ launching-rstudio
 touring-rstudio
 pausing-rstudio
 deleting-rstudio
+pausing-vs.-deleting-cloud-environments
+generic-cloud-environment
+rstudio
+data-modules
+getting-data-from-hpc-to-anvil
 student-instructions
 student-account-setup
 create-google-account-1
