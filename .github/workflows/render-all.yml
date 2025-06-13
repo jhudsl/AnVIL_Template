@@ -224,59 +224,59 @@ jobs:
           git status
           git push --force -u origin main  || echo "No changes to push"
           
-############################# Render AnVIL Special ###################################
-  # Do not remove this section with OTTR syncs!
-  render-anvil-special:
-    name: Render AnVIL Special
-    needs: [yaml-check, render-course]
-    runs-on: ubuntu-latest
-    container:
-      image: ${{needs.yaml-check.outputs.rendering_docker_image}}
-      
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
-          
-      - name: Login as github actions bot
-        run: |
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      # Make sure the link for AnVIL feedback is prepopulated for the specific course
-      - name: Set up feedback link
-        if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
-        run: |
-          bash .github/AnVIL_Feedback_Script.sh
-          git add _output.yml
-          git commit -m 'Set up feedback link' || echo "No changes to commit"
-          
-      # Render a student guide if specified. This is a bit clunky because 
-      # Bookdown does not work well if the files aren't named as such in the 
-      # root directory
-      - name: Run student guide render
-        if: ${{needs.yaml-check.outputs.toggle_student_guide == 'true'}}
-        id: student_guide
-        run: |
-          mkdir tmp1
-          mv _bookdown.yml _output.yml tmp1
-          mv student-guide/_bookdown.yml student-guide/_output.yml .
-          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
-          mv _bookdown.yml _output.yml student-guide
-          mv tmp1/_bookdown.yml tmp1/_output.yml .
-          rm -r tmp1
-          git add student-guide/*
-          git commit -m 'Create student guide' || echo "No changes to commit"
-          
-      # Commit the rendered course files
-      - name: Commit rendered course files
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git add --force docs/*
-          git commit -m 'Render course' || echo "No changes to commit"
-          git status docs/*
-          git push --force -u origin main  || echo "No changes to push"
+# ############################# Render AnVIL Special ###################################
+#   # Do not remove this section with OTTR syncs!
+#   render-anvil-special:
+#     name: Render AnVIL Special
+#     needs: [yaml-check, render-course]
+#     runs-on: ubuntu-latest
+#     container:
+#       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
+#       
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+#           token: ${{ secrets.GH_PAT }}
+#           
+#       - name: Login as github actions bot
+#         run: |
+#           git config --global --add safe.directory $GITHUB_WORKSPACE
+#           git config --global user.name 'github-actions[bot]'
+#           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+# 
+#       # Make sure the link for AnVIL feedback is prepopulated for the specific course
+#       - name: Set up feedback link
+#         if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
+#         run: |
+#           bash .github/AnVIL_Feedback_Script.sh
+#           git add _output.yml
+#           git commit -m 'Set up feedback link' || echo "No changes to commit"
+#           
+#       # Render a student guide if specified. This is a bit clunky because 
+#       # Bookdown does not work well if the files aren't named as such in the 
+#       # root directory
+#       - name: Run student guide render
+#         if: ${{needs.yaml-check.outputs.toggle_student_guide == 'true'}}
+#         id: student_guide
+#         run: |
+#           mkdir tmp1
+#           mv _bookdown.yml _output.yml tmp1
+#           mv student-guide/_bookdown.yml student-guide/_output.yml .
+#           Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
+#           mv _bookdown.yml _output.yml student-guide
+#           mv tmp1/_bookdown.yml tmp1/_output.yml .
+#           rm -r tmp1
+#           git add student-guide/*
+#           git commit -m 'Create student guide' || echo "No changes to commit"
+#           
+#       # Commit the rendered course files
+#       - name: Commit rendered course files
+#         env:
+#           GH_PAT: ${{ secrets.GH_PAT }}
+#         run: |
+#           git add --force docs/*
+#           git commit -m 'Render course' || echo "No changes to commit"
+#           git status docs/*
+#           git push --force -u origin main  || echo "No changes to push"
