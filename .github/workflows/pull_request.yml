@@ -145,15 +145,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      
+      # Set up git checkout
+      - name: Set up git checkout
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          branch_name='${{ github.head_ref }}'
+          git fetch --all
+          git checkout $branch_name
+          git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
+        shell: bash
 
       # Make sure the link for AnVIL feedback is prepopulated for the specific course
       - name: Set up feedback link
         id: feedback
         if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           bash .github/AnVIL_Feedback_Script.sh
           git add _output.yml
           git commit -m 'Set up feedback link' || echo "No changes to commit"
