@@ -152,6 +152,8 @@ jobs:
         if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
         run: |
           git config --system --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           bash .github/AnVIL_Feedback_Script.sh
           git add _output.yml
           git commit -m 'Set up feedback link' || echo "No changes to commit"
