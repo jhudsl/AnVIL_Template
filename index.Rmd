@@ -1,5 +1,5 @@
 ---
-title: "AnVIL Book Name Test2"
+title: "AnVIL Book Name"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 site: bookdown::bookdown_site
 documentclass: book
