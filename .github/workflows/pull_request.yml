@@ -166,11 +166,6 @@ jobs:
           bash .github/AnVIL_Feedback_Script.sh
           git add _output.yml
           git commit -m 'Set up feedback link' || echo "No changes to commit"
-
-      # Commit files to the preview branch
-      - name: Commit rendered bookdown files to preview branch
-        id: commit
-        run: |
           branch_name='preview-${{ github.event.pull_request.number }}'
           git diff origin/main -- docs >/dev/null && changes=true || changes=false
           echo "changes=$changes" >> $GITHUB_OUTPUT
