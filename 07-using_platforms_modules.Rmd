@@ -133,7 +133,7 @@ cow::borrow_chapter(
 
 These instructions can be customized by setting the following variables in `AnVIL_module_settings` before running `cow::borrow_chapter()`:
 
-- `cloud_environment`: (string) specific the type of cloud environment. Defaults to "your cloud environment"
+- `cloud_environment`: (string) specify the type of cloud environment. Defaults to "your cloud environment"
 - `include_pd_details`: (bool) whether to include an explanation about keeping the Persistent Disk. Defaults to FALSE
 
 ### Generic cloud environment, with PD details
