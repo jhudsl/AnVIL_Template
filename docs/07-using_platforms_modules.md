@@ -330,6 +330,12 @@ The example in this walkthrough uses data from an imported R package.
 
 :::: {.borrowed_chunk}
 
+When you are not actively performing an analysis (but will be returning soon), you should “pause” your cloud environment to minimize costs. This will release the CPU and memory resources for other people to use. Your files will be saved and will continue to accrue a small storage cost.
+
+Before pausing, it’s a good idea to transfer any important files out of your cloud environment. While a paused environment does preserve your files, it has no backup mechanism, so if anything happens to your cloud environment those files will be lost. If there is anything you would like to save permanently, it’s a good idea to copy it to another location, such as the Workspace bucket, GitHub, or your local machine.
+
+**To pause your cloud environment**:
+
 1. You can view costs and make changes to your cloud environments from the panel on the far right of the page.  If you don’t see this panel, you may need to scroll to the right.  Running environments will have a green dot, and paused environments will have an orange dot.
 
     <img src="07-using_platforms_modules_files/figure-html//16s-TjOg19RrkxS9sM9fGfD0M_WIxlw-e8PFWDymjvRU_g230ed3a46c7_0_0.png" alt="Screenshot of the RStudio interface. The cloud environment panel on the right is highlighted." width="100%" />
@@ -345,14 +351,6 @@ The example in this walkthrough uses data from an imported R package.
 1. When the environment is paused, an orange dot will be displayed next to the RStudio icon.  If you hover over the icon, you will see that it is paused, and has a small ongoing cost as long as it is paused.  When you’re ready to resume working, you can do so by clicking the RStudio icon and clicking Resume.
 
     <img src="07-using_platforms_modules_files/figure-html//16s-TjOg19RrkxS9sM9fGfD0M_WIxlw-e8PFWDymjvRU_g230ed3a46c7_0_237.png" alt="Screenshot of a Terra Workspace Dashboard. The RStudio icon in the far right panel is highlighted.  It has an orange dot next to it indicating the cloud environment is paused." width="100%" />
-
-1. The right-hand side icon reminds you that you are accruing cloud computing costs. If you don’t see this icon, you may need to scroll to the right.
-
-    <img src="07-using_platforms_modules_files/figure-html//1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg_g11f12bc99af_0_84.png" alt="Screenshot of the RStudio interface. The icon on the right showing that the cloud environment is running is highlighted." width="100%" />
-
-1. You should minimize charges when you are not performing an analysis. You can do this by clicking on the RStudio icon and selecting “Pause”. This will release the CPU and memory resources for other people to use. Note that your work will be saved in the environment and continue to accrue a very small cost.  This work will be lost if the cloud environment gets deleted.  If there is anything you would like to save permanently, it's a good idea to copy it from your compute environment to another location, such as the Workspace bucket, GitHub, or your local machine, depending on your needs.
-
-    <img src="07-using_platforms_modules_files/figure-html//1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg_g11f12bc99af_0_91.png" alt="Screenshot of the RStudio menu. The pause button which stops the cloud environment is highlighted." width="100%" />
 
 :::{.notice}
 You can also pause your cloud environment(s) at https://anvil.terra.bio/#clusters.
@@ -429,3 +427,4 @@ There are two ways to "shut down" RStudio on AnVIL:
     - **You will not be able to recover your work.**
     - Make sure you have saved anything you need to another location (such as the Workspace bucket, GitHub, or your local machine) before you delete your environment.
 ::::
+
