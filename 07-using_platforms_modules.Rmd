@@ -151,7 +151,6 @@ cow::borrow_chapter(
 AnVIL_module_settings <- list(include_pd_details = TRUE)
 cow::borrow_chapter(
   doc_path = "child/_child_cloud_environment_pause_vs_delete.Rmd",
-  branch = "add-details-about-keeping-pd",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
