@@ -386,9 +386,20 @@ You can also delete your cloud environment(s) and disk storage at https://anvil.
 
 ## Pausing vs. Deleting cloud environments
 
-These instructions can be customized to a specific cloud environment by setting `AnVIL_module_settings$cloud_environment` before running `cow::borrow_chapter()`.  If these variables have not been set, it defaults to "your cloud environment".
+These instructions can be customized by setting the following variables in `AnVIL_module_settings` before running `cow::borrow_chapter()`:
 
-### Generic cloud environment
+- `cloud_environment`: (string) specify the type of cloud environment. Defaults to "your cloud environment"
+- `include_pd_details`: (bool) whether to include an explanation about keeping the Persistent Disk. Defaults to FALSE
+
+### Generic cloud environment, with PD details
+
+```
+AnVIL_module_settings <- list(include_pd_details = TRUE)
+cow::borrow_chapter(
+  doc_path = "child/_child_cloud_environment_pause_vs_delete.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
 
 :::: {.borrowed_chunk}
 
@@ -403,9 +414,19 @@ There are two ways to "shut down" your cloud environment on AnVIL:
     - It's similar to throwing your computer or phone in the trash!
     - **You will not be able to recover your work.**
     - Make sure you have saved anything you need to another location (such as the Workspace bucket, GitHub, or your local machine) before you delete your environment.
+
+
+:::{.notice}
+You can also **delete the environment but keep the Persistent Disk** (this is like keeping the hard drive while throwing away the rest of the computer). However in practice this is rarely preferable. You will continue to be charged for the Persistent Disk, and the **Persistent Disk is both more expensive and less stable than your Workspace bucket**. Anything that you want to keep long-term should be moved to your Workspace bucket.
+
+Some examples of when you might want to delete the environment but keep the persistent disk:
+
+- You need to make certain types of changes to the cloud environment, which require you to delete and then recreate the environment. The PD allows you to safely delete your old environment and then attach the PD to the new environment, preserving your files.
+- You will not be using the cloud environment for a while **AND** it would be difficult to recreate the contents of the disk. Sometimes there may be files (such as intermediate results or complicated package installations) that don't need to be preserved long-term, but would be inconvenient to replace. The Persistent Disk can be used to keep those files around until you are ready to return to them, without incurring the cost of maintaining a paused cloud environment. Just keep in mind that (1) there is still a cost for the PD itself, which depends on the size of the PD, and (2) the PD is not backed up, so the files may be lost if something goes wrong with your cloud environment or PD.
+:::
 ::::
 
-### RStudio
+### RStudio, with no PD details
 
 ```
 AnVIL_module_settings <- list(cloud_environment = "RStudio")

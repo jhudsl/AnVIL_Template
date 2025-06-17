@@ -56,8 +56,8 @@ touring-rstudio
 pausing-rstudio
 deleting-rstudio
 pausing-vs.-deleting-cloud-environments
-generic-cloud-environment
-rstudio
+generic-cloud-environment-with-pd-details
+rstudio-with-no-pd-details
 data-modules
 getting-data-from-hpc-to-anvil
 student-instructions

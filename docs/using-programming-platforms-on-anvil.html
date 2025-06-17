@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2025-06-13" />
+<meta name="date" content="2025-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,8 +251,8 @@ div.csl-indent {
 <li class="chapter" data-level="8.11" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#deleting-rstudio"><i class="fa fa-check"></i><b>8.11</b> Deleting RStudio</a></li>
 <li class="chapter" data-level="8.12" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#pausing-vs.-deleting-cloud-environments"><i class="fa fa-check"></i><b>8.12</b> Pausing vs. Deleting cloud environments</a>
 <ul>
-<li class="chapter" data-level="8.12.1" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#generic-cloud-environment"><i class="fa fa-check"></i><b>8.12.1</b> Generic cloud environment</a></li>
-<li class="chapter" data-level="8.12.2" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#rstudio"><i class="fa fa-check"></i><b>8.12.2</b> RStudio</a></li>
+<li class="chapter" data-level="8.12.1" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#generic-cloud-environment-with-pd-details"><i class="fa fa-check"></i><b>8.12.1</b> Generic cloud environment, with PD details</a></li>
+<li class="chapter" data-level="8.12.2" data-path="using-programming-platforms-on-anvil.html"><a href="using-programming-platforms-on-anvil.html#rstudio-with-no-pd-details"><i class="fa fa-check"></i><b>8.12.2</b> RStudio, with no PD details</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="data-modules.html"><a href="data-modules.html"><i class="fa fa-check"></i><b>9</b> Data modules</a>
@@ -583,9 +583,18 @@ to load it into RStudio.</p>
 </div>
 <div id="pausing-vs.-deleting-cloud-environments" class="section level2 hasAnchor" number="8.12">
 <h2><span class="header-section-number">8.12</span> Pausing vs. Deleting cloud environments<a href="using-programming-platforms-on-anvil.html#pausing-vs.-deleting-cloud-environments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These instructions can be customized to a specific cloud environment by setting <code>AnVIL_module_settings$cloud_environment</code> before running <code>cow::borrow_chapter()</code>. If these variables have not been set, it defaults to “your cloud environment”.</p>
-<div id="generic-cloud-environment" class="section level3 hasAnchor" number="8.12.1">
-<h3><span class="header-section-number">8.12.1</span> Generic cloud environment<a href="using-programming-platforms-on-anvil.html#generic-cloud-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>These instructions can be customized by setting the following variables in <code>AnVIL_module_settings</code> before running <code>cow::borrow_chapter()</code>:</p>
+<ul>
+<li><code>cloud_environment</code>: (string) specify the type of cloud environment. Defaults to “your cloud environment”</li>
+<li><code>include_pd_details</code>: (bool) whether to include an explanation about keeping the Persistent Disk. Defaults to FALSE</li>
+</ul>
+<div id="generic-cloud-environment-with-pd-details" class="section level3 hasAnchor" number="8.12.1">
+<h3><span class="header-section-number">8.12.1</span> Generic cloud environment, with PD details<a href="using-programming-platforms-on-anvil.html#generic-cloud-environment-with-pd-details" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>AnVIL_module_settings &lt;- list(include_pd_details = TRUE)
+cow::borrow_chapter(
+  doc_path = &quot;child/_child_cloud_environment_pause_vs_delete.Rmd&quot;,
+  repo_name = &quot;jhudsl/AnVIL_Template&quot;
+)</code></pre>
 <div class="borrowed_chunk">
 <p>Cloud computing costs are based on the amount of time you use the computing resources, so it’s important to clean up after yourself when you’re done, and not just leave the computers running.</p>
 <p>There are two ways to “shut down” your cloud environment on AnVIL:</p>
@@ -603,10 +612,18 @@ to load it into RStudio.</p>
 <li>Make sure you have saved anything you need to another location (such as the Workspace bucket, GitHub, or your local machine) before you delete your environment.</li>
 </ul></li>
 </ul>
+<div class="notice">
+<p>You can also <strong>delete the environment but keep the Persistent Disk</strong> (this is like keeping the hard drive while throwing away the rest of the computer). However in practice this is rarely preferable. You will continue to be charged for the Persistent Disk, and the <strong>Persistent Disk is both more expensive and less stable than your Workspace bucket</strong>. Anything that you want to keep long-term should be moved to your Workspace bucket.</p>
+<p>Some examples of when you might want to delete the environment but keep the persistent disk:</p>
+<ul>
+<li>You need to make certain types of changes to the cloud environment, which require you to delete and then recreate the environment. The PD allows you to safely delete your old environment and then attach the PD to the new environment, preserving your files.</li>
+<li>You will not be using the cloud environment for a while <strong>AND</strong> it would be difficult to recreate the contents of the disk. Sometimes there may be files (such as intermediate results or complicated package installations) that don’t need to be preserved long-term, but would be inconvenient to replace. The Persistent Disk can be used to keep those files around until you are ready to return to them, without incurring the cost of maintaining a paused cloud environment. Just keep in mind that (1) there is still a cost for the PD itself, which depends on the size of the PD, and (2) the PD is not backed up, so the files may be lost if something goes wrong with your cloud environment or PD.</li>
+</ul>
 </div>
 </div>
-<div id="rstudio" class="section level3 hasAnchor" number="8.12.2">
-<h3><span class="header-section-number">8.12.2</span> RStudio<a href="using-programming-platforms-on-anvil.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="rstudio-with-no-pd-details" class="section level3 hasAnchor" number="8.12.2">
+<h3><span class="header-section-number">8.12.2</span> RStudio, with no PD details<a href="using-programming-platforms-on-anvil.html#rstudio-with-no-pd-details" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <pre><code>AnVIL_module_settings &lt;- list(cloud_environment = &quot;RStudio&quot;)
 cow::borrow_chapter(
   doc_path = &quot;child/_child_cloud_environment_pause_vs_delete.Rmd&quot;,
