@@ -4,6 +4,7 @@ BiocManager
 bioinformatics
 BIPOC
 Bloomberg
+bool
 callout
 Callout
 colData
