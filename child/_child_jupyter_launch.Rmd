@@ -37,9 +37,7 @@ if (AnVIL_module_settings$audience == "student") {
 }
 ```
 
-:::
 `r AnVIL_module_settings$text`
-:::
 
 <!-- Start of Step-by-Step Instructions -->
 
