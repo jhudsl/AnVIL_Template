@@ -25,6 +25,7 @@ cow::borrow_chapter(
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "child/_child_jupyter_launch.Rmd",
+  branch = "jupyter-launch-add-workspace-name",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
