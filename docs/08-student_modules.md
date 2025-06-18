@@ -173,11 +173,21 @@ The following instructions can be customized by setting certain variables before
 
 :::: {.borrowed_chunk}
 
+<!-- Callout box: warning about cloud costs-->
+
+
+
 :::{.warning}
 AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select the cloud computing environment described here to avoid runaway costs.
 :::
 
+<!-- Reminder about Workspaces -->
 
+
+
+For this activity, you should launch Jupyter from your copy of the `workspace-name` workspace. If you don't yet have your own copy, make one now by cloning the `workspace-name` Workspace.
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
@@ -236,11 +246,21 @@ AnVIL is very versatile and can scale up to use very powerful cloud computers. I
 
 :::: {.borrowed_chunk}
 
+<!-- Callout box: warning about cloud costs-->
+
+
+
 :::{.warning}
 AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select the cloud computing environment described here to avoid runaway costs.
 :::
 
+<!-- Reminder about Workspaces -->
 
+
+
+For this activity, you should launch Jupyter from your copy of the `workspace-name` workspace. If you don't yet have your own copy, make one now by cloning the `workspace-name` Workspace.
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
