@@ -73,6 +73,7 @@ AnVIL_module_settings <- list(
 
 cow::borrow_chapter(
   doc_path = "child/_child_jupyter_launch.Rmd",
+  branch = "jupyter-launch-add-workspace-name",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
@@ -91,6 +92,7 @@ AnVIL_module_settings <- list(
 
 cow::borrow_chapter(
   doc_path = "child/_child_jupyter_launch.Rmd",
+  branch = "jupyter-launch-add-workspace-name",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
