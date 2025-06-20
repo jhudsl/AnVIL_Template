@@ -9,6 +9,7 @@ Joining a team on AnVIL.
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "child/_child_google_create_account.Rmd",
+  branch = "add-institutional-google-account-warning",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
