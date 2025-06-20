@@ -3,7 +3,7 @@
 
 Do you plan to work with **controlled-access data** (e.g. GTEx, dbGaP)?
 
-  - IF YES, **you MUST use an institutional email address**. To comply with NIH data security requirements, unaffiliated email accounts (such as gmail.com) CANNOT be given access to controlled-access data.
+  - IF YES, **you MUST use an institutional email address**. To comply with [NIH data security requirements](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-24-157.html), unaffiliated email accounts (such as gmail.com) CANNOT be given access to controlled-access data.
 
 Will you be **moving between institutions**?
 
