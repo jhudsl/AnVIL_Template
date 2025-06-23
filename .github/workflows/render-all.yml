@@ -45,7 +45,7 @@ jobs:
     steps:
       - name: Run render
         id: render
-        uses: ottrproject/ottr-preview@main
+        uses: ottrproject/ottr-preview@ah-boolean
         with:
           toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
           preview: false
@@ -223,7 +223,7 @@ jobs:
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
           git status
           git push --force -u origin main  || echo "No changes to push"
-          
+
 ############################# Render AnVIL Special ###################################
   # Do not remove this section with OTTR syncs!
   render-anvil-special:
@@ -232,14 +232,14 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
-      
+
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
-          
+
       - name: Login as github actions bot
         run: |
           git config --global --add safe.directory $GITHUB_WORKSPACE
@@ -253,9 +253,9 @@ jobs:
           bash .github/AnVIL_Feedback_Script.sh
           git add _output.yml
           git commit -m 'Set up feedback link' || echo "No changes to commit"
-          
-      # Render a student guide if specified. This is a bit clunky because 
-      # Bookdown does not work well if the files aren't named as such in the 
+
+      # Render a student guide if specified. This is a bit clunky because
+      # Bookdown does not work well if the files aren't named as such in the
       # root directory
       - name: Run student guide render
         if: ${{needs.yaml-check.outputs.toggle_student_guide == 'true'}}
@@ -270,7 +270,7 @@ jobs:
           rm -r tmp1
           git add student-guide/*
           git commit -m 'Create student guide' || echo "No changes to commit"
-          
+
       # Commit the rendered course files
       - name: Commit rendered course files
         env:
