@@ -6,4 +6,4 @@ AnVIL provides all the **advantages of a cloud computing environment**, such as 
 
 See more in our [instructor guide](https://jhudatascience.org/AnVIL_Book_Instructor_Guide/introduction.html#why-should-i-use-anvil) on why AnVIL is a good choice for your classroom.
 
-</summary>
+</details>

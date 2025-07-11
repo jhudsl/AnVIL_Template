@@ -10,7 +10,7 @@ Use of Galaxy on AnVIL enables even more customizability with the ability to [in
 
 </details>
 
-<details><summary><Non-interactive batch processing</summary>
+<details><summary>Non-interactive batch processing</summary>
 
 Workflows can be [user-supplied/written](https://jhudatascience.org/AnVIL_Book_WDL/write-wdl.html#export-to-anvil-powered-by-terra-and-run) or [imported with Dockstore](https://jhudatascience.org/AnVIL_Book_WDL/import-and-configure-workflows.html) and used to steer non-interactive pipelines and batch processing of data.
 

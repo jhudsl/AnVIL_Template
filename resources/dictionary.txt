@@ -1,4 +1,5 @@
 ALS
+Amyotrophic
 AnVIL
 AnVIL's
 AnVILGCP
@@ -8,6 +9,7 @@ bioinformatics
 BIPOC
 Bloomberg
 bool
+browsable
 callout
 Callout
 CCDG
@@ -18,6 +20,7 @@ CoV
 CSER
 customizability
 customizations
+Dementias
 dex
 dexamethasone
 docx
