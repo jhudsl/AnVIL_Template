@@ -7,7 +7,7 @@ The NHGRI AnVIL (Genomic Data Science Analysis, Visualization, and Informatics L
 ### User-friendly process of accessing and interacting with the AnVIL platform
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_platformAccess.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -22,7 +22,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_platformInteroperability.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -37,7 +37,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_data.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -52,7 +52,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_inverted.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -63,7 +63,7 @@ cow:borrow_chapter(
 ### Scalability and flexibility in use
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_scale.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -74,7 +74,7 @@ cow:borrow_chapter(
 ### Maintenance and upkeep of hardware and software are handled by AnVIL -- you just rent what you need
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_maintenance.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -89,7 +89,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_workspaceRole.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -104,7 +104,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_research_workspaceShare.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -115,7 +115,7 @@ cow:borrow_chapter(
 ## Benefits of using AnVIL in the classroom
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_classroom.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -132,7 +132,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ### Ability to control costs
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_general_costControl.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -143,7 +143,7 @@ cow:borrow_chapter(
 ### Work with protected data safely on AnVIL
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_general_protectedData.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -154,7 +154,7 @@ cow:borrow_chapter(
 ### Focus on your work, not on maintaining the platform
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_general_maintenance.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -165,7 +165,7 @@ cow:borrow_chapter(
 ### Training and support is available for users
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_general_support.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
@@ -184,7 +184,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ```{r, echo = FALSE, results='asis'}
-cow:borrow_chapter(
+cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_general_community.Rmd",
     repo_name = "jhudsl/AnVIL_Template",
     remove_h1 = TRUE,
