@@ -1,0 +1,199 @@
+# Why use AnVIL?
+
+The NHGRI AnVIL (Genomic Data Science Analysis, Visualization, and Informatics Lab-space) is a project powered by Terra for biomedical researchers to access data, run analysis tools, and collaborate. Both biology researchers and educators can benefit from using AnVIL [(anvil.terra.bio)](anvil.terra.bio) for their research and in the classroom. This guide acts as a resource answering the question "why use AnVIL?".
+
+## Benefits of using AnVIL for research
+
+### User-friendly process of accessing and interacting with the AnVIL platform
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_platformAccess.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Variety of available analysis solutions/frameworks and tools
+
+```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_142#slide=id.g36e681c6048_0_142")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_platformInteroperability.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Ability to bring your own data or (with proper permissions) work with controlled access data
+
+```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_91#slide=id.g36e681c6048_0_91")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_data.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Data and analysis methods in one place
+
+```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_179#slide=id.g36e681c6048_0_179")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_inverted.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Scalability and flexibility in use
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_scale.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Maintenance and upkeep of hardware and software are handled by AnVIL -- you just rent what you need
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_maintenance.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Group and workspace management structure for role-based permissions and collaboration
+
+```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_152#slide=id.g36e681c6048_0_152")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_workspaceRole.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Create, share, and reuse reproducible analysis workspaces
+
+```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_166#slide=id.g36e681c6048_0_166")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_workspaceShare.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+## Benefits of using AnVIL in the classroom
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_classroom.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+```{r, echo = FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_34#slide=id.g36e681c6048_0_34")
+```
+
+## Overall benefits of AnVIL
+
+### Ability to control costs
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_general_costControl.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Work with protected data safely on AnVIL
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_general_protectedData.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Focus on your work, not on maintaining the platform
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_general_maintenance.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+### Training and support is available for users
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_general_support.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_185#slide=id.g36e681c6048_0_185")
+```
+
+### AnVIL is a collaborative community with a development mindset
+
+```{r echo=FALSE, out.width="100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_147#slide=id.g36e681c6048_0_147")
+```
+
+```{r, echo = FALSE, results='asis'}
+cow:borrow_chapter(
+    doc_path = "child/_child_why_anvil_general_community.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+)
+```
+
+All of this together describes how the AnVIL provides secure, cost-effective genomic analysis at scale.
+
+```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.p#slide=id.p")
+```
