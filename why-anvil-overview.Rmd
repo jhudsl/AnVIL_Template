@@ -17,7 +17,7 @@ cow::borrow_chapter(
 
 ### Variety of available analysis solutions/frameworks and tools
 
-```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+```{r echo=FALSE, out.width = "100%", fig.alt = "There are a variety of available analysis frameworks and tools available on the AnVIL, each with interoperability such that data and results in your workspace can be passed from tool to tool. Analysis solutions are available for interactive work or non-interactive batch processing (e.g., with WDL workflows)."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_142#slide=id.g36e681c6048_0_142")
 ```
 
@@ -32,7 +32,7 @@ cow::borrow_chapter(
 
 ### Ability to bring your own data or (with proper permissions) work with controlled access data
 
-```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+```{r echo=FALSE, out.width = "100%", fig.alt = "With AnVIL you can upload your own data (signified by the plus sign) or browse cloud-hosted open and controlled access datasets to identify relevant datasets, importing or requesting access to those for your workspaces. Several consortia have data available on AnVIL with data deposits growing."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_91#slide=id.g36e681c6048_0_91")
 ```
 
@@ -47,7 +47,7 @@ cow::borrow_chapter(
 
 ### Data and analysis methods in one place
 
-```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+```{r echo = FALSE, out.width = "100%", fig.alt = "The AnVIL portal is an entry point for all parts of AnVIL, allowing visitors to launch Terra to work on AnVIL, as well as access important announcements or documentation."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_179#slide=id.g36e681c6048_0_179")
 ```
 
@@ -84,7 +84,7 @@ cow::borrow_chapter(
 
 ### Group and workspace management structure for role-based permissions and collaboration
 
-```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+```{r echo = FALSE, out.width = "100%", fig.alt = "A workspace is the fundamental unit of activity in AnVIL with role-based access. The workspace will show the user’s access level (e.g., whether they are an owner or reader or writer who has the ability to run compute or share). This helps to enable collaboration. The Access level of the user is highlighted in this example workspace."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_152#slide=id.g36e681c6048_0_152")
 ```
 
@@ -99,7 +99,7 @@ cow::borrow_chapter(
 
 ### Create, share, and reuse reproducible analysis workspaces
 
-```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+```{r echo = FALSE, out.width = "100%", fig.alt = "A workspace can serve as a shareable record of analyses. The ability to access the permalink to the example workspace is highlighted in this image."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_166#slide=id.g36e681c6048_0_166")
 ```
 
@@ -123,7 +123,7 @@ cow::borrow_chapter(
 )
 ```
 
-```{r, echo = FALSE, out.width = "100%", fig.alt = ""}
+```{r, echo = FALSE, out.width = "100%", fig.alt = "AnVIL provides several prepared exercises providing relevant biology background and datasets using a variety of tools to help train students within a cloud computing environment. 4 examples include the Single Cell with Bioconductor AnVIL Demo, the analysis of a SARS-CoV-2 genome with Galaxy on AnVIL (part of the Genomic Data Science Community Network or GDSCN), the GDSCN BioDIGS R Data Package, and an RNA-Seq mini CURE."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_34#slide=id.g36e681c6048_0_34")
 ```
 
@@ -173,13 +173,13 @@ cow::borrow_chapter(
 )
 ```
 
-```{r echo=FALSE, out.width = "100%", fig.alt = ""}
+```{r echo=FALSE, out.width = "100%", fig.alt = "Training and support are available for users in multiple formats. Users can browse the AnVIL collection to see what is available. Examples include the AnVIL Getting Started book (available online), a moderated support forum, and live AnVIL Demos that are also recorded and posted to YouTube."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_185#slide=id.g36e681c6048_0_185")
 ```
 
 ### AnVIL is a collaborative community with a development mindset
 
-```{r echo=FALSE, out.width="100%", fig.alt = ""}
+```{r echo=FALSE, out.width="100%", fig.alt = "The AnVIL has a collaborative community with a development mindset, soliciting and listening to feedback and supporting and maintaining forums and training for discussion and help."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_147#slide=id.g36e681c6048_0_147")
 ```
 
@@ -196,6 +196,6 @@ cow::borrow_chapter(
 
 All of this together describes how the AnVIL provides secure, cost-effective genomic analysis at scale, and is a useful cloud-based platform for training and research.
 
-```{r echo = FALSE, out.width = "100%", fig.alt = ""}
+```{r echo = FALSE, out.width = "100%", fig.alt = "In addition to the general benefits of working on the cloud (such as learners and analysts being able to work with identical environments with pre-installed bioinformatic tools), AnVIL provides a strong community with support and training material, bridging the gap between training to research on human genomic datasets using a secure platform for controlled-access data storage, management, and analysis. And though bioinformatic tools are pre-installed, users are given the ability to install additional software and tools as needed and can pay to scale resources resulting in quicker runtimes as needed. Additionally, AnVIL has collaboration tools for workgroups."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.p#slide=id.p")
 ```
