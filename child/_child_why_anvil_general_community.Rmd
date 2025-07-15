@@ -13,4 +13,4 @@ Additionally, AnVIL values and routinely solicits user feedback to improve the u
 
 * at the community conference
 * through [State of the AnVIL community polls](https://help.anvilproject.org/t/participate-in-the-state-of-the-anvil-2025-community-poll/275)
-* in voluntary user interviews 
+* through voluntary user interviews 

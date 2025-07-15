@@ -6,8 +6,8 @@
 
 AnVIL workspaces have previously been shared in publications to demonstrate reproducible science.
 
-* [https://www.science.org/doi/10.1126/science.abl3533](https://www.science.org/doi/10.1126/science.abl3533)
-* [https://www.science.org/doi/10.1126/science.abe3261](https://www.science.org/doi/10.1126/science.abe3261)
-* [https://anvil.terra.bio/#workspaces/help-gatk/Reproducibility_Case_Study_Tetralogy_of_Fallot](https://anvil.terra.bio/#workspaces/help-gatk/Reproducibility_Case_Study_Tetralogy_of_Fallot)
+* https://www.science.org/doi/10.1126/science.abl3533
+* https://www.science.org/doi/10.1126/science.abe3261
+* https://anvil.terra.bio/#workspaces/help-gatk/Reproducibility_Case_Study_Tetralogy_of_Fallot
 
 </details>
