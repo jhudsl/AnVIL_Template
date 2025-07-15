@@ -1,6 +1,6 @@
 # Why use AnVIL?
 
-The NHGRI AnVIL (Genomic Data Science Analysis, Visualization, and Informatics Lab-space) is a project powered by Terra for biomedical researchers to access data, run analysis tools, and collaborate. Both biology researchers and educators can benefit from using AnVIL ([anvil.terra.bio](anvil.terra.bio)) for their research and in the classroom. This guide acts as a resource answering the question "why use AnVIL?".
+The NHGRI AnVIL (Genomic Data Science Analysis, Visualization, and Informatics Lab-space) is a project powered by Terra for biomedical researchers to access data, run analysis tools, and collaborate. Both biology researchers and educators can benefit from using AnVIL ([anvil.terra.bio](https://anvil.terra.bio/)) for their research and in the classroom. This guide acts as a resource answering the question "why use AnVIL?".
 
 ## Benefits of using AnVIL for research
 
