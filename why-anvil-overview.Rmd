@@ -2,7 +2,17 @@
 
 The NHGRI AnVIL (Genomic Data Science Analysis, Visualization, and Informatics Lab-space) is a project powered by Terra for biomedical researchers to access data, run analysis tools, and collaborate. Both biology researchers and educators can benefit from using AnVIL ([anvil.terra.bio](https://anvil.terra.bio/)) for their research and in the classroom. This guide acts as a resource answering the question "why use AnVIL?".
 
+It will discuss the research, classroom, and general benefits of using AnVIL.
+
+```{r echo = FALSE, results = 'asis', fig.alt = "The research, classroom, and general benefits of using the AnVIL are outlined. For research, the AnVIL platform can be accessed easily, there are a variety of available analysis solutions and tools, you can bring your own data or access cloud-hosted open or controlled access data; further your data and analysis are in the same place instead of having to move data between platforms. The analysis resources are scalable with researchers renting what they need. Additionally work on the AnVIL platform can be collaborative with workspaces having role-based permissions for group members and then these workspaces are shareable enhancing reproducibility. For the classroom, the AnVIL offers a unified computing system for learners where they will have an authentic experience with cloud computing that is increasingly becoming frequently utilized within today’s research environment. Learners can learn and practice with a variety of tools using relevant datasets and prepared exercises. The general benefits of using the AnVIL include the ability to control cloud-computing costs, being able to safely work with protected data, maintenance is handled by others not the users, training and support is available for users, and the AnVIL is a collaborative community with a development mindset."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g37132c23502_0_0#slide=id.g37132c23502_0_0")
+```
+
 ## Benefits of using AnVIL for research
+
+```{r echo=FALSE, out.width="100%", fig.alt = "Research benefits for the AnVIL include that the AnVIL platform can be accessed easily, there are a variety of available analysis solutions and tools, you can bring your own data or access cloud-hosted open or controlled access data; further your data and analysis are in the same place instead of having to move data between platforms. The analysis resources are scalable with researchers renting what they need. Additionally work on the AnVIL platform can be collaborative with workspaces having role-based permissions for group members and then these workspaces are shareable enhancing reproducibility"}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g37132c23502_0_56#slide=id.g37132c23502_0_56")
+```
 
 ### User-friendly process of accessing and interacting with the AnVIL platform
 
@@ -114,6 +124,10 @@ cow::borrow_chapter(
 
 ## Benefits of using AnVIL in the classroom
 
+```{r echo=FALSE, out.width="100%", fig.alt = "For the classroom, the AnVIL offers a unified computing system for learners where they will have an authentic experience with cloud computing that is increasingly becoming frequently utilized within today’s research environment. Learners can learn and practice with a variety of tools using relevant datasets and prepared exercises."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g37132c23502_0_68#slide=id.g37132c23502_0_68")
+```
+
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
     doc_path = "child/_child_why_anvil_classroom.Rmd",
@@ -128,6 +142,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ```
 
 ## Overall benefits of AnVIL
+
+```{r echo=FALSE, out.width="100%", fig.alt = "The general benefits of using the AnVIL include the ability to control cloud-computing costs, being able to safely work with protected data, maintenance is handled by others not the users, training and support is available for users, and the AnVIL is a collaborative community with a development mindset."}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g37132c23502_0_80#slide=id.g37132c23502_0_80")
+```
 
 ### Ability to control costs
 
