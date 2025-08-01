@@ -1,6 +1,6 @@
 # Research Benefit: Variety of available analysis solutions/frameworks and tools
 
-AnVIL supports an assortment of frameworks and tools such that researchers can use their favorite to work with their data interactively or through non-interactive batch processing. Due to this variety and interoperability with other platforms, researchers are enabled to stay within a single environment for their analysis without having to shift between platforms and use their favorite tooling to analyze their data.
+AnVIL supports an assortment of frameworks and tools. Researchers can use their favorite tool to work with data interactively or through non-interactive batch processing. Due to this variety and interoperability with other platforms, researchers can stay within a single environment for their analysis without having to shift between platforms.
 
 ::: {.click_to_expand_block}
 
