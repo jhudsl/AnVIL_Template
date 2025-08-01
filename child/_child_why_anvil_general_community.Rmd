@@ -1,6 +1,6 @@
 # Overall Benefit: AnVIL is a collaborative community with a development mindset
 
-AnVIL has begun hosting community conferences to collaboratively innovate during CoFests! and to discuss research performed with the platform as well as current development, feature requests, and a roadmap or future directions for the platform.
+AnVIL has begun hosting community conferences to collaboratively innovate during CoFests! and to discuss research performed with the platform. The community can work directly with the AnVIL team to understand current development, feature requests, and a roadmap or future directions for the platform.
 
 ::: {.click_to_expand_block}
 
