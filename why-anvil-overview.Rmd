@@ -14,7 +14,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqb
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g37132c23502_0_56#slide=id.g37132c23502_0_56")
 ```
 
-### User-friendly process of accessing and interacting with the AnVIL platform
+### Ease of platform access
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -25,7 +25,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Variety of available analysis solutions/frameworks and tools
+### Variety of analysis solutions
 
 ```{r echo=FALSE, out.width = "100%", fig.alt = "There are a variety of available analysis frameworks and tools available on the AnVIL, each with interoperability such that data and results in your workspace can be passed from tool to tool. Analysis solutions are available for interactive work or non-interactive batch processing (e.g., with WDL workflows)."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_142#slide=id.g36e681c6048_0_142")
@@ -40,7 +40,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Ability to bring your own data or (with proper permissions) work with controlled access data
+### Data: yours or cloud-hosted open & controlled access
 
 ```{r echo=FALSE, out.width = "100%", fig.alt = "With AnVIL you can upload your own data (signified by the plus sign) or browse cloud-hosted open and controlled access datasets to identify relevant datasets, importing or requesting access to those for your workspaces. Several consortia have data available on AnVIL with data deposits growing."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_91#slide=id.g36e681c6048_0_91")
@@ -55,7 +55,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Data and analysis methods in one place
+### Data & analysis in same place
 
 ```{r echo = FALSE, out.width = "100%", fig.alt = "The AnVIL portal is an entry point for all parts of AnVIL, allowing visitors to launch Terra to work on AnVIL, as well as access important announcements or documentation."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_179#slide=id.g36e681c6048_0_179")
@@ -70,7 +70,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Scalability and flexibility in use
+### Scalability
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -81,7 +81,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Maintenance and upkeep of hardware and software are handled by AnVIL -- you just rent what you need
+### Rent needed resources
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -92,7 +92,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Group and workspace management structure for role-based permissions and collaboration
+### Role-based permissions
 
 ```{r echo = FALSE, out.width = "100%", fig.alt = "A workspace is the fundamental unit of activity in AnVIL with role-based access. The workspace will show the user’s access level (e.g., whether they are an owner or reader or writer who has the ability to run compute or share). This helps to enable collaboration. The Access level of the user is highlighted in this example workspace."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_152#slide=id.g36e681c6048_0_152")
@@ -107,7 +107,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Create, share, and reuse reproducible analysis workspaces
+### Shareable workspaces (reproducible work!)
 
 ```{r echo = FALSE, out.width = "100%", fig.alt = "A workspace can serve as a shareable record of analyses. The ability to access the permalink to the example workspace is highlighted in this image."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_166#slide=id.g36e681c6048_0_166")
@@ -158,7 +158,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Work with protected data safely on AnVIL
+### Work with protected data safely
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -169,7 +169,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Focus on your work, not on maintaining the platform
+### Maintenance is handled
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -180,7 +180,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Training and support is available for users
+### Training and support is available
 
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
@@ -195,7 +195,7 @@ cow::borrow_chapter(
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_185#slide=id.g36e681c6048_0_185")
 ```
 
-### AnVIL is a collaborative community with a development mindset
+### Collaborative community
 
 ```{r echo=FALSE, out.width="100%", fig.alt = "The AnVIL has a collaborative community with a development mindset, soliciting and listening to feedback and supporting and maintaining forums and training for discussion and help."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_147#slide=id.g36e681c6048_0_147")
