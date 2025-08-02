@@ -107,7 +107,7 @@ cow::borrow_chapter(
 )
 ```
 
-### Shareable workspaces (reproducible work!)
+### Shareable workspaces
 
 ```{r echo = FALSE, out.width = "100%", fig.alt = "A workspace can serve as a shareable record of analyses. The ability to access the permalink to the example workspace is highlighted in this image."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1zq27o5gSWeiaEPqbCTTL3c_zvozN5lg_QNJYRVyM-SI/edit?slide=id.g36e681c6048_0_166#slide=id.g36e681c6048_0_166")
@@ -120,6 +120,17 @@ cow::borrow_chapter(
     remove_h1 = TRUE,
     branch = "why_anvil"
 )
+```
+
+### Repository compliant with DMS Policy
+
+```{r, echo = FALSE, results='asis'}
+cow::borrow_chapter(
+    doc_path = "child/_child_why_anvil_research_repository.Rmd",
+    repo_name = "jhudsl/AnVIL_Template",
+    remove_h1 = TRUE,
+    branch = "why_anvil"
+  )
 ```
 
 ## Benefits of using AnVIL in the classroom
