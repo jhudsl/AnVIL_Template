@@ -3,6 +3,7 @@ Amyotrophic
 AnVIL
 AnVIL's
 AnVILGCP
+anvilproject
 AnVILWorkflow
 BiocManager
 bioinformatics
@@ -23,6 +24,7 @@ customizations
 Dementias
 dex
 dexamethasone
+DMS
 docx
 Dockstore
 dropdown
