@@ -439,3 +439,14 @@ a.anchor:hover {
   font-size: .85em;
   color: var(--accent-color);
 }
+
+
+/* Click to Expand Details Boxes */
+
+.click_to_expand_block {
+    padding: 1em;
+    padding-top: .5em;
+    border: 1px grey;
+    background: #E8E8E8;
+    color: black;
+}
