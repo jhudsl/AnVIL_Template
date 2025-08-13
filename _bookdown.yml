@@ -14,6 +14,7 @@ rmd_files: ["index.Rmd",
             "08-student_modules.Rmd",
             "10-user_management_modules.Rmd",
             "11-why-anvil.Rmd",
+            "why-anvil-overview.Rmd",
             "12-instructor_modules.Rmd",
             "About.Rmd",
             "References.Rmd"]
@@ -26,4 +27,3 @@ language:
 output_dir: "docs"
 output:
     bookdown::html_book
-
