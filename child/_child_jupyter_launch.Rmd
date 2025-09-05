@@ -40,7 +40,7 @@ AnVIL_module_settings$text <- "Note that, in order to use Jupyter, **you must ha
 
 # student version
 if (AnVIL_module_settings$audience == "student") {
-  AnVIL_module_settings$text <- "For this activity, you should launch Jupyter from your copy of the Workspace `r AnVIL_module_settings$workspace_name`. If you don't yet have your own copy, make one now by cloning the Workspace `r AnVIL_module_settings$workspace_name`."
+  AnVIL_module_settings$text <- paste0("For this activity, you should launch Jupyter from your copy of the Workspace "), AnVIL_module_settings$workspace_name, ". If you don't yet have your own copy, make one now by cloning the Workspace ", AnVIL_module_settings$workspace_name", ".")
 }
 ```
 
