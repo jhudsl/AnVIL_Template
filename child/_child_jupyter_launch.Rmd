@@ -6,6 +6,13 @@ if (!exists("AnVIL_module_settings")) {
 } else if (is.null(AnVIL_module_settings$audience)) {
   AnVIL_module_settings$audience = "general"
 }
+
+if (is.null(AnVIL_module_settings$workspace_name)) {
+  AnVIL_module_settings$workspace_name = "specified by your instructor"
+  AnVIL_module_settings$clone_name =  "ExampleWorkspace_Firstname_Lastname"
+} else {
+AnVIL_module_settings$clone_name = paste0(AnVIL_module_settings$workspace_name, "_Firstname_Lastname")
+}
 ```
 <!-- Callout box: warning about cloud costs-->
 
@@ -33,7 +40,7 @@ AnVIL_module_settings$text <- "Note that, in order to use Jupyter, **you must ha
 
 # student version
 if (AnVIL_module_settings$audience == "student") {
-  AnVIL_module_settings$text <- "For this activity, you should launch Jupyter from your copy of the `workspace-name` workspace. If you don't yet have your own copy, make one now by cloning the `workspace-name` Workspace."
+  AnVIL_module_settings$text <- "For this activity, you should launch Jupyter from your copy of the Workspace `r AnVIL_module_settings$workspace_name`. If you don't yet have your own copy, make one now by cloning the Workspace `r AnVIL_module_settings$workspace_name`."
 }
 ```
 
