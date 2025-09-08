@@ -55,8 +55,17 @@ if (AnVIL_module_settings$audience == "student") {
     ```{r, echo=FALSE, fig.alt='Screenshot of Terra drop-down menu.  The "hamburger" button to extend the drop-down menu is highlighted, and the menu item "Workspaces" is highlighted.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE/edit#slide=id.g117989bd49c_0_150")
     ```
+```{r, include=FALSE}
+# settings for instructions about opening your Workspace
+AnVIL_module_settings$text <- "1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`."
 
-1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.
+# student version - remind students which workspace they should be using
+if (AnVIL_module_settings$audience == "student") {
+  AnVIL_module_settings$text <- paste0("1. Click on the name of your Workspace (e.g. `", AnVIL_module_settings$clone_name, "`). You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.)
+}
+```
+
+`r AnVIL_module_settings$text`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
