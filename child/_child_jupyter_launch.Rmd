@@ -57,15 +57,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFi
     ```
 ```{r, include=FALSE}
 # settings for instructions about opening your Workspace
-AnVIL_module_settings$text <- "1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`."
+AnVIL_module_settings$text <- "1. Click on the name of your Workspace. You should be routed to a link that looks like:"
 
 # student version - remind students which workspace they should be using
 if (AnVIL_module_settings$audience == "student") {
-  AnVIL_module_settings$text <- paste0("1. Click on the name of your Workspace (e.g. `", AnVIL_module_settings$clone_name, "`). You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.")
+  AnVIL_module_settings$text <- paste0("1. Click on the name of your Workspace (e.g. `", AnVIL_module_settings$clone_name, "`). You should be routed to a link that looks like:")
 }
 ```
 
 `r AnVIL_module_settings$text`
+
+    `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
@@ -184,7 +186,7 @@ AnVIL_module_settings$include <- FALSE
 AnVIL_module_settings$text <- NULL
 # for students
 if (AnVIL_module_settings$audience == "student") {
-      AnVIL_module_settings$include <- TRUE
+    AnVIL_module_settings$include <- TRUE
     AnVIL_module_settings$text <- '1. Leave everything else as-is. To create your Jupyter Cloud Environment, scroll down and click the "CREATE" button.'
 
 }
@@ -220,12 +222,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFi
 # settings for instructions about opening a Jupyter Notebook
 
 # default settings
-AnVIL_module_settings$include <- TRUE
 AnVIL_module_settings$text <- '1. Clicking on a Notebook name will open a static preview of the Notebook.  To edit and run the Notebook, click the "OPEN" button.'
 
-# for students - exclude this, they may not be launching a Notebook right away.  Individual books / courses can give more specific instructions about which Notebook to open and when to open it.
-if (AnVIL_module_settings$audience == "student") {
-  AnVIL_module_settings$include <- FALSE
+# Instruct students to open a specific notebook
+if (!is.null(AnVIL_module_settings$notebook_name)) {
+    AnVIL_module_settings$text <- paste0("1. Find the Notebook named **", AnVIL_module_settings$notebook_name, "**. Click the "OPEN" button to run and edit this Notebook. (Clicking on its name will open a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code.)"
 }
 ```
 
