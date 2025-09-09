@@ -61,8 +61,22 @@ The following instructions can be customized by setting certain variables before
 - `audience` = Defaults to `general`, telling them to use the default Jupyter settings. If `audience` is set to `student`, it gives more specific instructions.
 - `docker_image` = Optional, it will tell them how to set the image.
 - `startup_script` =  Optional, it will tell them how to set the script.
+- `workspace_name` =  Optional, it will tell them which Workspace to use to launch Jupyter.
+- `notebook_name` = Optional, it will tell them to open a specific Notebook
 
-### Using default Jupyter environment:
+### Set audience to student, but don't specify details:
+
+```
+# Specify variables
+AnVIL_module_settings <- list(
+  audience = "student"
+)
+
+cow::borrow_chapter(
+  doc_path = "child/_child_jupyter_launch.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
 
 :::: {.borrowed_chunk}
 ```{r, echo = FALSE, results='asis'}
@@ -79,7 +93,23 @@ cow::borrow_chapter(
 ```
 ::::
 
-### Using custom Jupyter environment:
+### Set custom instructions:
+
+```
+# Specify variables
+AnVIL_module_settings <- list(
+  audience = "student",
+  docker_image = "example docker",
+  startup_script = "example startup script",
+  workspace_name = "My_Class_Workspace",
+  notebook_name = "Awesome_Notebook"
+)
+
+cow::borrow_chapter(
+  doc_path = "child/_child_jupyter_launch.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
 
 :::: {.borrowed_chunk}
 ```{r, echo = FALSE, results='asis'}
@@ -87,7 +117,9 @@ cow::borrow_chapter(
 AnVIL_module_settings <- list(
   audience = "student",
   docker_image = "example docker",
-  startup_script = "example startup script"
+  startup_script = "example startup script",
+  workspace_name = "My_Class_Workspace",
+  notebook_name = "Awesome_Notebook"
 )
 
 cow::borrow_chapter(
