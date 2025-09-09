@@ -222,11 +222,11 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFi
 # settings for instructions about opening a Jupyter Notebook
 
 # default settings
-AnVIL_module_settings$text <- '1. Clicking on a Notebook name will open a static preview of the Notebook.  To edit and run the Notebook, click the "OPEN" button.'
+AnVIL_module_settings$text <- '1. Clicking on a Notebook name will open a static preview of the Notebook. To edit and run the Notebook, click the "OPEN" button.'
 
 # Instruct students to open a specific notebook
 if (!is.null(AnVIL_module_settings$notebook_name)) {
-    AnVIL_module_settings$text <- paste0('1. Find the Notebook named **', AnVIL_module_settings$notebook_name, '**. Click the "OPEN" button to run and edit this Notebook. (Clicking on its name will open a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code.)')
+  AnVIL_module_settings$text <- paste0('1. Find the Notebook named **', AnVIL_module_settings$notebook_name, '**. Click on its name, then click the "OPEN" button to run and edit this Notebook. (Clicking on its name opens a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code.)')
 }
 ```
 
