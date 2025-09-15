@@ -102,7 +102,8 @@ cow::borrow_chapter(
 ```{r, echo = FALSE, results='asis'}
 cow::borrow_chapter(
   doc_path = "child/_child_rstudio_tour.Rmd",
-  repo_name = "jhudsl/AnVIL_Template"
+  repo_name = "jhudsl/AnVIL_Template",
+  branch = "kweav-patchQuotes"
 )
 ```
 ::::
