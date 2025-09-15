@@ -13,7 +13,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. You can now quickly install precompiled binaries using the AnVIL package’s `install()` function. We will use it to install the `Glimma` package and the `airway` package. The `airway` package contains a `SummarizedExperiment` data class. This data describes an RNA-Seq experiment on four human airway smooth muscle cell lines treated with dexamethasone.
 
-{Note: for some of the packages, you will have to install packaged from the CRAN repository, using the `install.packages()` function. The examples will show you which install method to use.}
+    {Note: for some of the packages, you will have to install packaged from the CRAN repository, using the `install.packages()` function. The examples will show you which install method to use.}
 
     ```{r, eval = FALSE, echo = TRUE}
 AnVIL::install(c("Glimma", "airway"))
@@ -25,13 +25,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. Load the example data.
 
-::: {.notice}
+    ::: {.notice}
 If you need to load data stored in your workspace or a GCP bucket,
 you'll need to use the [AnVILGCP package](https://bioconductor.org/packages/release/bioc/vignettes/AnVILGCP/inst/doc/AnVILGCPIntroduction.html)
 to load it into RStudio.
 
 The example in this walkthrough uses data from an imported R package.  
-:::
+    :::
 
     ```{r, eval = FALSE, echo= TRUE}
 library(airway)
