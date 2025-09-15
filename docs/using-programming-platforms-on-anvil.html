@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2025-09-12" />
+<meta name="date" content="2025-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -269,8 +269,8 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="student-instructions.html"><a href="student-instructions.html#student-instructions-for-launching-jupyter"><i class="fa fa-check"></i><b>10.3</b> Student instructions for launching Jupyter</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="student-instructions.html"><a href="student-instructions.html#using-default-jupyter-environment"><i class="fa fa-check"></i><b>10.3.1</b> Using default Jupyter environment:</a></li>
-<li class="chapter" data-level="10.3.2" data-path="student-instructions.html"><a href="student-instructions.html#using-custom-jupyter-environment"><i class="fa fa-check"></i><b>10.3.2</b> Using custom Jupyter environment:</a></li>
+<li class="chapter" data-level="10.3.1" data-path="student-instructions.html"><a href="student-instructions.html#set-audience-to-student-but-dont-specify-details"><i class="fa fa-check"></i><b>10.3.1</b> Set audience to student, but don’t specify details:</a></li>
+<li class="chapter" data-level="10.3.2" data-path="student-instructions.html"><a href="student-instructions.html#set-custom-instructions"><i class="fa fa-check"></i><b>10.3.2</b> Set custom instructions:</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="student-instructions.html"><a href="student-instructions.html#student-instructions-for-launching-rstudio"><i class="fa fa-check"></i><b>10.4</b> Student instructions for launching RStudio</a>
 <ul>
@@ -384,15 +384,19 @@ div.csl-indent {
 <div id="launching-jupyter" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Launching Jupyter<a href="using-programming-platforms-on-anvil.html#launching-jupyter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="borrowed_chunk">
+<!-- Callout box: warning about cloud costs-->
 <div class="warning">
 <p>AnVIL is very versatile and can scale up to use very powerful cloud computers. It’s very important that you select a cloud computing environment appropriate to your needs to avoid runaway costs. If you are uncertain, start with the default settings; it is fairly easy to increase your compute resources later, if needed, but harder to scale down.</p>
 </div>
-<p>Note that, in order to use Jupyter, you must have access to a Terra Workspace with permission to compute (i.e. you must be a “Writer” or “Owner” of the Workspace).</p>
+<!-- Reminder about Workspaces -->
+<p>Note that, in order to use Jupyter, <strong>you must have access to a Terra Workspace with permission to compute</strong> (i.e. you must be a <strong>Writer</strong> or <strong>Owner</strong> of the Workspace). If you created or cloned the Workspace yourself, you are good to go! If you are using someone else’s Workspace, the Workspace Owner(s) can grant you appropriate permissions, if they haven’t already.</p>
+<!-- Start of Step-by-Step Instructions -->
 <ol style="list-style-type: decimal">
 <li><p>Open Terra - use a web browser to go to <a href="https://anvil.terra.bio/"><code>anvil.terra.bio</code></a></p></li>
 <li><p>In the drop-down menu on the left, navigate to “Workspaces”. Click the triple bar in the top left corner to access the menu. Click “Workspaces”.</p>
 <p><img src="07-using_platforms_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" /></p></li>
-<li><p>Click on the name of your Workspace. You should be routed to a link that looks like: <code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code>.</p></li>
+<li><p>Click on the name of your Workspace. You should be routed to a link that looks like:</p>
+<p><code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code></p></li>
 <li><p>Click on the cloud icon on the far right to access your Cloud Environment options. If you don’t see this icon, you may need to scroll to the right.</p>
 <p><img src="07-using_platforms_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g14ea2db115d_0_22.png" alt="Screenshot of a Terra Workspace. The cloud icon to create a new cloud environment is highlighted." width="100%" /></p></li>
 <li><p>In the dialogue box, click the “Settings” button under Jupyter.</p>

@@ -29,11 +29,21 @@ The slides for this tutorial are are located [here](https://docs.google.com/pres
 
 :::: {.borrowed_chunk}
 
+<!-- Callout box: warning about cloud costs-->
+
+
+
 :::{.warning}
 AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select a cloud computing environment appropriate to your needs to avoid runaway costs.  If you are uncertain, start with the default settings; it is fairly easy to increase your compute resources later, if needed, but harder to scale down.
 :::
 
-Note that, in order to use Jupyter, you must have access to a Terra Workspace with permission to compute (i.e. you must be a "Writer" or "Owner" of the Workspace).
+<!-- Reminder about Workspaces -->
+
+
+
+Note that, in order to use Jupyter, **you must have access to a Terra Workspace with permission to compute** (i.e. you must be a **Writer** or **Owner** of the Workspace). If you created or cloned the Workspace yourself, you are good to go! If you are using someone else's Workspace, the Workspace Owner(s) can grant you appropriate permissions, if they haven't already.
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
@@ -41,7 +51,10 @@ Note that, in order to use Jupyter, you must have access to a Terra Workspace wi
 
     <img src="07-using_platforms_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" />
 
-1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.
+
+1. Click on the name of your Workspace. You should be routed to a link that looks like:
+
+    `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
@@ -87,7 +100,7 @@ Note that, in order to use Jupyter, you must have access to a Terra Workspace wi
 
 
 
-1. Clicking on a Notebook name will open a static preview of the Notebook.  To edit and run the Notebook, click the "OPEN" button.
+1. Clicking on a Notebook name will open a static preview of the Notebook. To edit and run the Notebook, click the "OPEN" button.
 
     <img src="07-using_platforms_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_82.png" alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted." width="100%" />
 ::::

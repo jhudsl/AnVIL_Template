@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2025-09-12" />
+<meta name="date" content="2025-09-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -269,8 +269,8 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="student-instructions.html"><a href="student-instructions.html#student-instructions-for-launching-jupyter"><i class="fa fa-check"></i><b>10.3</b> Student instructions for launching Jupyter</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="student-instructions.html"><a href="student-instructions.html#using-default-jupyter-environment"><i class="fa fa-check"></i><b>10.3.1</b> Using default Jupyter environment:</a></li>
-<li class="chapter" data-level="10.3.2" data-path="student-instructions.html"><a href="student-instructions.html#using-custom-jupyter-environment"><i class="fa fa-check"></i><b>10.3.2</b> Using custom Jupyter environment:</a></li>
+<li class="chapter" data-level="10.3.1" data-path="student-instructions.html"><a href="student-instructions.html#set-audience-to-student-but-dont-specify-details"><i class="fa fa-check"></i><b>10.3.1</b> Set audience to student, but don’t specify details:</a></li>
+<li class="chapter" data-level="10.3.2" data-path="student-instructions.html"><a href="student-instructions.html#set-custom-instructions"><i class="fa fa-check"></i><b>10.3.2</b> Set custom instructions:</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="student-instructions.html"><a href="student-instructions.html#student-instructions-for-launching-rstudio"><i class="fa fa-check"></i><b>10.4</b> Student instructions for launching RStudio</a>
 <ul>
@@ -506,18 +506,34 @@ At this point, it might make things easier to open up a new window in your brows
 <li><code>audience</code> = Defaults to <code>general</code>, telling them to use the default Jupyter settings. If <code>audience</code> is set to <code>student</code>, it gives more specific instructions.</li>
 <li><code>docker_image</code> = Optional, it will tell them how to set the image.</li>
 <li><code>startup_script</code> = Optional, it will tell them how to set the script.</li>
+<li><code>workspace_name</code> = Optional, it will tell them which Workspace to use to launch Jupyter.</li>
+<li><code>notebook_name</code> = Optional, it will tell them to open a specific Notebook</li>
 </ul>
-<div id="using-default-jupyter-environment" class="section level3 hasAnchor" number="10.3.1">
-<h3><span class="header-section-number">10.3.1</span> Using default Jupyter environment:<a href="student-instructions.html#using-default-jupyter-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="set-audience-to-student-but-dont-specify-details" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Set audience to student, but don’t specify details:<a href="student-instructions.html#set-audience-to-student-but-dont-specify-details" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code># Specify variables
+AnVIL_module_settings &lt;- list(
+  audience = &quot;student&quot;
+)
+
+cow::borrow_chapter(
+  doc_path = &quot;child/_child_jupyter_launch.Rmd&quot;,
+  repo_name = &quot;jhudsl/AnVIL_Template&quot;
+)</code></pre>
 <div class="borrowed_chunk">
+<!-- Callout box: warning about cloud costs-->
 <div class="warning">
 <p>AnVIL is very versatile and can scale up to use very powerful cloud computers. It’s very important that you select the cloud computing environment described here to avoid runaway costs.</p>
 </div>
+<!-- Reminder about Workspaces -->
+<p>For this activity, you should launch Jupyter from your copy of the Workspace <strong>specified by your instructor</strong>. (It should be named something like <code>ExampleWorkspace_Firstname_Lastname</code>). If you don’t yet have your own copy, make one now by cloning the Workspace <strong>specified by your instructor</strong> before following the steps below.</p>
+<!-- Start of Step-by-Step Instructions -->
 <ol style="list-style-type: decimal">
 <li><p>Open Terra - use a web browser to go to <a href="https://anvil.terra.bio/"><code>anvil.terra.bio</code></a></p></li>
 <li><p>In the drop-down menu on the left, navigate to “Workspaces”. Click the triple bar in the top left corner to access the menu. Click “Workspaces”.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" /></p></li>
-<li><p>Click on the name of your Workspace. You should be routed to a link that looks like: <code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code>.</p></li>
+<li><p>Click on the name of your Workspace (e.g. <code>ExampleWorkspace_Firstname_Lastname</code>). You should be routed to a link that looks like:</p>
+<p><code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code></p></li>
 <li><p>Click on the cloud icon on the far right to access your Cloud Environment options. If you don’t see this icon, you may need to scroll to the right.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g14ea2db115d_0_22.png" alt="Screenshot of a Terra Workspace. The cloud icon to create a new cloud environment is highlighted." width="100%" /></p></li>
 <li><p>In the dialogue box, click the “Settings” button under Jupyter.</p>
@@ -532,20 +548,40 @@ At this point, it might make things easier to open up a new window in your brows
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_66.png" alt="Screenshot of a Terra Workspace. The hovertext for the Jupyter icon is highlighted, and indicates that the status of the environment is 'Running'.  The ANALYSES tab is also highlighted" width="100%" /></p></li>
 <li><p>From the ANALYSES tab, you can click on the name of an existing Jupyter Notebook to view and launch it, or click the “START” button to create a new Notebook.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_73.png" alt="Screenshot of Terra Workspace with the 'ANALYSES' tab selected and highlighted.  The page shows a list of Jupyter Notebooks.  The Notebook names and the START button are highlighted." width="100%" /></p></li>
+<li><p>Clicking on a Notebook name will open a static preview of the Notebook. To edit and run the Notebook, click the “OPEN” button.</p>
+<p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_82.png" alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted." width="100%" /></p></li>
 </ol>
 </div>
 </div>
-<div id="using-custom-jupyter-environment" class="section level3 hasAnchor" number="10.3.2">
-<h3><span class="header-section-number">10.3.2</span> Using custom Jupyter environment:<a href="student-instructions.html#using-custom-jupyter-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="set-custom-instructions" class="section level3 hasAnchor" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> Set custom instructions:<a href="student-instructions.html#set-custom-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code># Specify variables
+AnVIL_module_settings &lt;- list(
+  audience = &quot;student&quot;,
+  docker_image = &quot;example docker&quot;,
+  startup_script = &quot;example startup script&quot;,
+  workspace_name = &quot;My_Class_Workspace&quot;,
+  notebook_name = &quot;Awesome_Notebook&quot;
+)
+
+cow::borrow_chapter(
+  doc_path = &quot;child/_child_jupyter_launch.Rmd&quot;,
+  repo_name = &quot;jhudsl/AnVIL_Template&quot;
+)</code></pre>
 <div class="borrowed_chunk">
+<!-- Callout box: warning about cloud costs-->
 <div class="warning">
 <p>AnVIL is very versatile and can scale up to use very powerful cloud computers. It’s very important that you select the cloud computing environment described here to avoid runaway costs.</p>
 </div>
+<!-- Reminder about Workspaces -->
+<p>For this activity, you should launch Jupyter from your copy of the Workspace <strong>My_Class_Workspace</strong>. (It should be named something like <code>My_Class_Workspace_Firstname_Lastname</code>). If you don’t yet have your own copy, make one now by cloning the Workspace <strong>My_Class_Workspace</strong> before following the steps below.</p>
+<!-- Start of Step-by-Step Instructions -->
 <ol style="list-style-type: decimal">
 <li><p>Open Terra - use a web browser to go to <a href="https://anvil.terra.bio/"><code>anvil.terra.bio</code></a></p></li>
 <li><p>In the drop-down menu on the left, navigate to “Workspaces”. Click the triple bar in the top left corner to access the menu. Click “Workspaces”.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" /></p></li>
-<li><p>Click on the name of your Workspace. You should be routed to a link that looks like: <code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code>.</p></li>
+<li><p>Click on the name of your Workspace (e.g. <code>My_Class_Workspace_Firstname_Lastname</code>). You should be routed to a link that looks like:</p>
+<p><code>https://anvil.terra.bio/#workspaces/&lt;billing-project&gt;/&lt;workspace-name&gt;</code></p></li>
 <li><p>Click on the cloud icon on the far right to access your Cloud Environment options. If you don’t see this icon, you may need to scroll to the right.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g14ea2db115d_0_22.png" alt="Screenshot of a Terra Workspace. The cloud icon to create a new cloud environment is highlighted." width="100%" /></p></li>
 <li><p>In the dialogue box, click the “Settings” button under Jupyter.</p>
@@ -567,6 +603,8 @@ At this point, it might make things easier to open up a new window in your brows
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_66.png" alt="Screenshot of a Terra Workspace. The hovertext for the Jupyter icon is highlighted, and indicates that the status of the environment is 'Running'.  The ANALYSES tab is also highlighted" width="100%" /></p></li>
 <li><p>From the ANALYSES tab, you can click on the name of an existing Jupyter Notebook to view and launch it, or click the “START” button to create a new Notebook.</p>
 <p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_73.png" alt="Screenshot of Terra Workspace with the 'ANALYSES' tab selected and highlighted.  The page shows a list of Jupyter Notebooks.  The Notebook names and the START button are highlighted." width="100%" /></p></li>
+<li><p>Find the Notebook named <strong>Awesome_Notebook</strong>. Click on its name, then click the “OPEN” button to run and edit this Notebook. (Clicking on its name opens a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code. You must click the OPEN button to run or edit the code.)</p>
+<p><img src="08-student_modules_files/figure-html/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_82.png" alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted." width="100%" /></p></li>
 </ol>
 </div>
 </div>
