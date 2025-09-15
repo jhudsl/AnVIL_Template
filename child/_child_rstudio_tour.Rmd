@@ -13,16 +13,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. You can now quickly install precompiled binaries using the AnVIL package’s `install()` function. We will use it to install the `Glimma` package and the `airway` package. The `airway` package contains a `SummarizedExperiment` data class. This data describes an RNA-Seq experiment on four human airway smooth muscle cell lines treated with dexamethasone. 
 
-{Note: for some of the packages, you will have to install packaged from the CRAN repository, using the install.packages() function. The examples will show you which install method to use.}
+{Note: for some of the packages, you will have to install packaged from the CRAN repository, using the `install.packages()` function. The examples will show you which install method to use.}
 
-    <br/>
 
     ```{r, eval = FALSE, echo = TRUE}
-AnVIL::install(c("Glimma", "airway"))
+    AnVIL::install(c("Glimma", "airway"))
     ```
-
     <br/>
-
     ```{r, eval = TRUE, echo=FALSE, fig.alt='Screenshot of the RStudio environment interface. Code has been typed in the console and is highlighted.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg/edit#slide=id.g11f12bc99af_0_56")
     ```
@@ -37,15 +34,11 @@ to load it into RStudio.
 The example in this walkthrough uses data from an imported R package.  
 :::
 
-    <br/>
-
     ```{r, eval = FALSE, echo = TRUE}
-library(airway)
-data(airway)
+    library(airway)
+    data(airway)
     ```
-
     <br/>
-
     ```{r, eval = TRUE, echo=FALSE, fig.alt='Screenshot of the RStudio environment interface. Code has been typed in the console and is highlighted.'}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg/edit#slide=id.g11f12bc99af_0_56")
     ```
