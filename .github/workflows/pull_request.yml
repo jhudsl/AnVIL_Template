@@ -131,10 +131,47 @@ jobs:
           github-token: ${{ secrets.GH_PAT }}
           glob: '**/*.md'
 
+############################# AnVIL Feedback Link ##############################
+  # Do not remove this section with OTTR syncs!
+  anvil-feedback:
+    name: Make AnVIL Feedback Link
+    needs: [yaml-check]
+    runs-on: ubuntu-latest
+    container:
+      image: ${{needs.yaml-check.outputs.rendering_docker_image}}
+
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      # Set up git checkout
+      - name: Set up git checkout
+        run: |
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          branch_name='${{ github.head_ref }}'
+          git fetch --all
+          git checkout $branch_name
+          git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
+        shell: bash
+
+      # Make sure the link for AnVIL feedback is prepopulated for the specific course
+      - name: Set up feedback link
+        id: feedback
+        if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
+        run: |
+          bash .github/AnVIL_Feedback_Script.sh
+          git add _output.yml
+          git commit -m 'Set up feedback link' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
+          
 ############################# Render Preview ###################################
   render-preview:
     name: Render preview
-    needs: yaml-check
+    needs: [yaml-check, anvil-feedback]
     runs-on: ubuntu-latest
     if: ${{needs.yaml-check.outputs.toggle_render_preview == 'true'}}
     permissions:
@@ -153,7 +190,7 @@ jobs:
         toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
         docker_image: ${{needs.yaml-check.outputs.rendering_docker_image}}
         
-############################# Render AnVIL Special ###################################
+############################# Render Student Guide #############################
   # Do not remove this section with OTTR syncs!
   render-anvil-special:
     name: Render AnVIL Special
@@ -181,15 +218,6 @@ jobs:
           git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
         shell: bash
 
-      # Make sure the link for AnVIL feedback is prepopulated for the specific course
-      - name: Set up feedback link
-        id: feedback
-        if: ${{needs.yaml-check.outputs.toggle_feedback_link == 'true'}}
-        run: |
-          bash .github/AnVIL_Feedback_Script.sh
-          git add _output.yml
-          git commit -m 'Set up feedback link' || echo "No changes to commit"
-          
       # Render a student guide if specified. This is a bit clunky because
       # Bookdown does not work well if the files aren't named as such in the
       # root directory

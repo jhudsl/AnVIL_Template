@@ -7,19 +7,19 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1eypYLLqD11-NwHLs
 
 1. Click on “Delete Environment”.
 
-    ```{r, echo=FALSE, out.width = '100%', fig.alt='Screenshot of the cloud environment popout. "Delete environment" is highlighted.'}
+    ```{r, echo=FALSE, out.width = '100%', fig.alt="Screenshot of the cloud environment popout. 'Delete environment' is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1eypYLLqD11-NwHLs4adGpcuSB07dYEJfAaALSMvgzqw/edit#slide=id.ge1182913a6_0_20")
     ```
 
 1. If you are certain that you do not need the data and configuration on your disk, you should select "Delete everything, including persistent disk".  If there is anything you would like to save, open the compute environment and copy the file(s) from your compute environment to another location, such as the Workspace bucket, GitHub, or your local machine, depending on your needs.
 
-    ```{r, echo=FALSE, out.width = '100%', fig.alt='Screenshot of the cloud environment popout. "Delete everything, including persistent disk" is highlighted.'}
+    ```{r, echo=FALSE, out.width = '100%', fig.alt="Screenshot of the cloud environment popout. 'Delete everything, including persistent disk' is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1eypYLLqD11-NwHLs4adGpcuSB07dYEJfAaALSMvgzqw/edit#slide=id.ge1182913a6_0_46")
     ```
 
 1. Select "DELETE".
 
-    ```{r, echo=FALSE, out.width = '100%', fig.alt='Screenshot of the cloud environment popout. "Delete" is highlighted.'}
+    ```{r, echo=FALSE, out.width = '100%', fig.alt="Screenshot of the cloud environment popout. 'Delete' is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1eypYLLqD11-NwHLs4adGpcuSB07dYEJfAaALSMvgzqw/edit#slide=id.ge1182913a6_0_51")
     ```
 
