@@ -3,7 +3,7 @@ Next, we will be using RStudio and the package `Glimma` to create interactive pl
 
 1. The Bioconductor team has created a very useful package to programmatically interact with Terra and Google Cloud. Install the `AnVIL` package. It will make some steps easier as we go along.
 
-  ```{r, eval = FALSE}
+  ```{r, eval = FALSE, echo = TRUE}
   BiocManager::install("AnVIL")
   ```
 
@@ -15,7 +15,7 @@ Next, we will be using RStudio and the package `Glimma` to create interactive pl
 
 {Note: for some of the packages, you will have to install packaged from the CRAN repository, using the `install.packages()` function. The examples will show you which install method to use.}
 
-  ```{r, eval = FALSE}
+  ```{r, eval = FALSE, echo = TRUE}
   AnVIL::install(c("Glimma", "airway"))
   ```
 
@@ -33,7 +33,7 @@ to load it into RStudio.
 The example in this walkthrough uses data from an imported R package.  
 :::
 
-  ```{r, eval = FALSE}
+  ```{r, eval = FALSE, echo= TRUE}
   library(airway)
   data(airway)
   ```
@@ -66,7 +66,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. You can also download plots and other files created directly in RStudio. To download the following plot, click on "Export" and save in your preferred format to the default directory. This saves the file in your cloud environment.
 
-    ```{r, eval = FALSE}
+    ```{r, eval = FALSE, echo = TRUE}
 limma::plotMDS(airway)
     ```
 
