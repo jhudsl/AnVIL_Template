@@ -6,14 +6,22 @@ if (!exists("AnVIL_module_settings")) {
 } else if (is.null(AnVIL_module_settings$audience)) {
   AnVIL_module_settings$audience = "general"
 }
+
+if (is.null(AnVIL_module_settings$workspace_name)) {
+  AnVIL_module_settings$workspace_name = "specified by your instructor"
+  AnVIL_module_settings$clone_name =  "ExampleWorkspace_Firstname_Lastname"
+} else {
+AnVIL_module_settings$clone_name = paste0(AnVIL_module_settings$workspace_name, "_Firstname_Lastname")
+}
 ```
+<!-- Callout box: warning about cloud costs-->
 
 ```{r, include=FALSE}
 # settings for warning about controlling costs
 # default
 AnVIL_module_settings$text <- "AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select a cloud computing environment appropriate to your needs to avoid runaway costs.  If you are uncertain, start with the default settings; it is fairly easy to increase your compute resources later, if needed, but harder to scale down."
 
-
+# student version
 if (AnVIL_module_settings$audience == "student") {
   AnVIL_module_settings$text <- "AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select the cloud computing environment described here to avoid runaway costs."
 }
@@ -23,7 +31,22 @@ if (AnVIL_module_settings$audience == "student") {
 `r AnVIL_module_settings$text`
 :::
 
-`r if( !(AnVIL_module_settings$audience == "student") ) {'Note that, in order to use Jupyter, you must have access to a Terra Workspace with permission to compute (i.e. you must be a "Writer" or "Owner" of the Workspace).'}`
+<!-- Reminder about Workspaces -->
+
+```{r, include=FALSE}
+# settings for instructions about which workspace to use
+# default
+AnVIL_module_settings$text <- "Note that, in order to use Jupyter, **you must have access to a Terra Workspace with permission to compute** (i.e. you must be a **Writer** or **Owner** of the Workspace). If you created or cloned the Workspace yourself, you are good to go! If you are using someone else's Workspace, the Workspace Owner(s) can grant you appropriate permissions, if they haven't already."
+
+# student version
+if (AnVIL_module_settings$audience == "student") {
+  AnVIL_module_settings$text <- paste0("For this activity, you should launch Jupyter from your copy of the Workspace **", AnVIL_module_settings$workspace_name, "**. (It should be named something like `", AnVIL_module_settings$clone_name, "`). If you don't yet have your own copy, make one now by cloning the Workspace **", AnVIL_module_settings$workspace_name, "** before following the steps below.")
+}
+```
+
+`r AnVIL_module_settings$text`
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
@@ -32,8 +55,19 @@ if (AnVIL_module_settings$audience == "student") {
     ```{r, echo=FALSE, fig.alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE/edit#slide=id.g117989bd49c_0_150")
     ```
+```{r, include=FALSE}
+# settings for instructions about opening your Workspace
+AnVIL_module_settings$text <- "1. Click on the name of your Workspace. You should be routed to a link that looks like:"
 
-1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.
+# student version - remind students which workspace they should be using
+if (AnVIL_module_settings$audience == "student") {
+  AnVIL_module_settings$text <- paste0("1. Click on the name of your Workspace (e.g. `", AnVIL_module_settings$clone_name, "`). You should be routed to a link that looks like:")
+}
+```
+
+`r AnVIL_module_settings$text`
+
+    `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
@@ -152,7 +186,7 @@ AnVIL_module_settings$include <- FALSE
 AnVIL_module_settings$text <- NULL
 # for students
 if (AnVIL_module_settings$audience == "student") {
-      AnVIL_module_settings$include <- TRUE
+    AnVIL_module_settings$include <- TRUE
     AnVIL_module_settings$text <- '1. Leave everything else as-is. To create your Jupyter Cloud Environment, scroll down and click the "CREATE" button.'
 
 }
@@ -188,20 +222,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFi
 # settings for instructions about opening a Jupyter Notebook
 
 # default settings
-AnVIL_module_settings$include <- TRUE
-AnVIL_module_settings$text <- '1. Clicking on a Notebook name will open a static preview of the Notebook.  To edit and run the Notebook, click the "OPEN" button.'
+AnVIL_module_settings$text <- '1. Clicking on a Notebook name will open a static preview of the Notebook. To edit and run the Notebook, click the "OPEN" button.'
 
-# for students - exclude this, they may not be launching a Notebook right away.  Individual books / courses can give more specific instructions about which Notebook to open and when to open it.
-if (AnVIL_module_settings$audience == "student") {
-  AnVIL_module_settings$include <- FALSE
+# Instruct students to open a specific notebook
+if (!is.null(AnVIL_module_settings$notebook_name)) {
+  AnVIL_module_settings$text <- paste0('1. Find the Notebook named **', AnVIL_module_settings$notebook_name, '**. Click on its name, then click the "OPEN" button to run and edit this Notebook. (Clicking on its name opens a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code. You must click the OPEN button to run or edit the code.)')
 }
 ```
 
-```{r, echo=FALSE, results='asis', eval=AnVIL_module_settings$include}
-cat(AnVIL_module_settings$text)
-```
+`r AnVIL_module_settings$text`
 
-    ```{r, echo=FALSE, eval=AnVIL_module_settings$include, fig.alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted."}
+    ```{r, echo=FALSE, fig.alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE/edit#slide=id.g25442045568_0_82")
     ```
 
