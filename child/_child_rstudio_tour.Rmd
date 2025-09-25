@@ -74,13 +74,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1
 
 1. You should see the plot in the "Files" pane.
 
-    ```{r, echo=FALSE, fig.alt="Screenshot of the RStudio interface. A plot has been created. The saved pdf file is now visible under the 'Files' pane."}
+    ```{r, echo=FALSE, fig.alt="Screenshot of the RStudio interface. A plot has been created. The saved pdf file is now visible under the "Files" pane."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg/edit#slide=id.g1204ed6da7f_0_19")
     ```
 
 1. Select this file and click "More" > "Export"
 
-    ```{r, echo=FALSE, fig.alt="Screenshot of the RStudio interface. A plot has been created. The saved pdf file is now visible under the 'Files' pane. The 'More' and 'Export' menus have been highlighted."}
+    ```{r, echo=FALSE, fig.alt='Screenshot of the RStudio interface. A plot has been created. The saved pdf file is now visible under the 'Files' pane. The 'More' and 'Export' menus have been highlighted.''}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1BLTCaogA04bbeSD1tR1Wt-mVceQA6FHXa8FmFzIARrg/edit#slide=id.g1204ed6db6a_0_0")
     ```
 
