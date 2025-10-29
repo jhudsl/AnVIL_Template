@@ -16,6 +16,7 @@ rmd_files: ["index.Rmd",
             "11-why-anvil.Rmd",
             "why-anvil-overview.Rmd",
             "12-instructor_modules.Rmd",
+            "AnVIL_Template_CollectionStatus_Table.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
