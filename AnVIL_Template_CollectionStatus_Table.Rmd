@@ -1,4 +1,4 @@
-# AnVIL Collection -- Status of Books/Repositories
+# AnVIL Collection -- Status of Book Repositories
 
 <table>
   <tr>
