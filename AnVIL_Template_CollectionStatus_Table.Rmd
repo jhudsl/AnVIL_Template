@@ -1,3 +1,5 @@
+# AnVIL Collection -- Status of Books/Repositories
+
 <table>
   <tr>
     <th>Repo name</th>
@@ -7,7 +9,7 @@
     <th>Number of Open PRs</th>
     <th>Website up?</th>
   </tr>
-  <!-- Comment showing row format
+  <!-- Comment showing row format. Note private repos will not be accessible with badgen
   <tr> new row
     <th><a href="https://github.com/{REPO_ORG (e.g., jhudsl|fhdsl)}/{REPO_NAME}" target="_blank">{REPO_ORG (e.g., jhudsl|fhdsl)}/{REPO_NAME}</a></th>
     <th><a href="https://github.com/{REPO_ORG (e.g., jhudsl|fhdsl)}/{REPO_NAME}/actions/workflows/render-all.yml" target="_blank"> <img src="https://github.com/{REPO_ORG (e.g., jhudsl|fhdsl)}/{REPO_NAME}/actions/workflows/render-all.yml/badge.svg" alt="Render all output courses"></a></th>
@@ -209,16 +211,6 @@
     <th><a href="https://github.com/jhudsl/AnVIL_Template_Test/pulls?q=is%3Aopen" target="_blank"> <img src="https://badgen.net/github/open-prs/jhudsl/AnVIL_Template_Test" alt="Open PRs"></a></th>
     <th><a href="https://jhudatascience.org/AnVIL_Template_Test/" target="_blank"> <img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg" alt="Website Status"></a></th>
   </tr>
-  <!-- Private Repo not accessible with badgen
-  <tr>
-    <th><a href="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes" target="_blank">jhudsl/AnVIL_Book_WDL_Quizzes</a></th>
-    <th><a href="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes/actions/workflows/render-all.yml" target="_blank"> <img src="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes/actions/workflows/render-all.yml/badge.svg" alt="Render all output courses"></a></th>
-    <th><a href="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes/issues?q=is%3Aopen" target="_blank"> <img src="https://img.shields.io/github/issues/jhudsl/AnVIL_Book_WDL_Quizzes" alt="Open Issues"></a></th>
-    <th><a href="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes/branches" target="_blank"> <img src="https://badgen.net/github/branches/jhudsl/AnVIL_Book_WDL_Quizzes" alt="GitHub Branches"></a></th>
-    <th><a href="https://github.com/jhudsl/AnVIL_Book_WDL_Quizzes/pulls?q=is%3Aopen" target="_blank"> <img src="https://badgen.net/github/open-prs/jhudsl/AnVIL_Book_WDL_Quizzes" alt="Open PRs"></a></th>
-    <th><a href="https://jhudatascience.org/AnVIL_Book_WDL_Quizzes/" target="_blank"> <img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg" alt="Website Status"></a></th>
-  </tr>
-  -->
   <tr>
     <th><a href="https://github.com/jhudsl/GDSCN_Template_Test" target="_blank">jhudsl/GDSCN_Template_Test</a></th>
     <th><a href="https://github.com/jhudsl/GDSCN_Template_Test/actions/workflows/render-all.yml" target="_blank"> <img src="https://github.com/jhudsl/GDSCN_Template_Test/actions/workflows/render-all.yml/badge.svg" alt="Render all output courses"></a></th>
