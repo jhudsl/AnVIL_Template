@@ -104,5 +104,5 @@ why-anvil-for-instructors-1
 checklist-link
 checklist-timeline-premade-content
 recommendation-to-use-strides
-anvil-collection-status-of-booksrepositories
+status-of-book-repositories-in-the-anvil-collection
 references
