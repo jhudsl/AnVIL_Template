@@ -168,16 +168,40 @@ The following instructions can be customized by setting certain variables before
 - `audience` = Defaults to `general`, telling them to use the default Jupyter settings. If `audience` is set to `student`, it gives more specific instructions.
 - `docker_image` = Optional, it will tell them how to set the image.
 - `startup_script` =  Optional, it will tell them how to set the script.
+- `workspace_name` =  Optional, it will tell them which Workspace to use to launch Jupyter.
+- `notebook_name` = Optional, it will tell them to open a specific Notebook
 
-### Using default Jupyter environment:
+### Set audience to student, but don't specify details:
+
+```
+# Specify variables
+AnVIL_module_settings <- list(
+  audience = "student"
+)
+
+cow::borrow_chapter(
+  doc_path = "child/_child_jupyter_launch.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
 
 :::: {.borrowed_chunk}
+
+<!-- Callout box: warning about cloud costs-->
+
+
 
 :::{.warning}
 AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select the cloud computing environment described here to avoid runaway costs.
 :::
 
+<!-- Reminder about Workspaces -->
 
+
+
+For this activity, you should launch Jupyter from your copy of the Workspace **specified by your instructor**. (It should be named something like `ExampleWorkspace_Firstname_Lastname`). If you don't yet have your own copy, make one now by cloning the Workspace **specified by your instructor** before following the steps below.
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
@@ -185,7 +209,10 @@ AnVIL is very versatile and can scale up to use very powerful cloud computers. I
 
     <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" />
 
-1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.
+
+1. Click on the name of your Workspace (e.g. `ExampleWorkspace_Firstname_Lastname`). You should be routed to a link that looks like:
+
+    `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
@@ -229,18 +256,48 @@ AnVIL is very versatile and can scale up to use very powerful cloud computers. I
 
     <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_73.png" alt="Screenshot of Terra Workspace with the 'ANALYSES' tab selected and highlighted.  The page shows a list of Jupyter Notebooks.  The Notebook names and the START button are highlighted." width="100%" />
 
-    
+
+
+1. Clicking on a Notebook name will open a static preview of the Notebook. To edit and run the Notebook, click the "OPEN" button.
+
+    <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_82.png" alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted." width="100%" />
 ::::
 
-### Using custom Jupyter environment:
+### Set custom instructions:
+
+```
+# Specify variables
+AnVIL_module_settings <- list(
+  audience = "student",
+  docker_image = "example docker",
+  startup_script = "example startup script",
+  workspace_name = "My_Class_Workspace",
+  notebook_name = "Awesome_Notebook"
+)
+
+cow::borrow_chapter(
+  doc_path = "child/_child_jupyter_launch.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
 
 :::: {.borrowed_chunk}
+
+<!-- Callout box: warning about cloud costs-->
+
+
 
 :::{.warning}
 AnVIL is very versatile and can scale up to use very powerful cloud computers. It's very important that you select the cloud computing environment described here to avoid runaway costs.
 :::
 
+<!-- Reminder about Workspaces -->
 
+
+
+For this activity, you should launch Jupyter from your copy of the Workspace **My_Class_Workspace**. (It should be named something like `My_Class_Workspace_Firstname_Lastname`). If you don't yet have your own copy, make one now by cloning the Workspace **My_Class_Workspace** before following the steps below.
+
+<!-- Start of Step-by-Step Instructions -->
 
 1. Open Terra - use a web browser to go to [`anvil.terra.bio`](https://anvil.terra.bio/)
 
@@ -248,7 +305,10 @@ AnVIL is very versatile and can scale up to use very powerful cloud computers. I
 
     <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g117989bd49c_0_150.png" alt="Screenshot of Terra drop-down menu.  The 'hamburger' button to extend the drop-down menu is highlighted, and the menu item 'Workspaces' is highlighted." width="100%" />
 
-1. Click on the name of your Workspace. You should be routed to a link that looks like: `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`.
+
+1. Click on the name of your Workspace (e.g. `My_Class_Workspace_Firstname_Lastname`). You should be routed to a link that looks like:
+
+    `https://anvil.terra.bio/#workspaces/<billing-project>/<workspace-name>`
 
 1. Click on the cloud icon on the far right to access your Cloud Environment options.  If you don’t see this icon, you may need to scroll to the right.
 
@@ -300,7 +360,11 @@ AnVIL is very versatile and can scale up to use very powerful cloud computers. I
 
     <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_73.png" alt="Screenshot of Terra Workspace with the 'ANALYSES' tab selected and highlighted.  The page shows a list of Jupyter Notebooks.  The Notebook names and the START button are highlighted." width="100%" />
 
-    
+
+
+1. Find the Notebook named **Awesome_Notebook**. Click on its name, then click the "OPEN" button to run and edit this Notebook. (Clicking on its name opens a static preview of the Notebook, which can be useful for viewing your previous work but will not let you run the code. You must click the OPEN button to run or edit the code.)
+
+    <img src="08-student_modules_files/figure-html//1-IU5l40UxmpoBqFimSUmT1PNEUij2UnXMslOsiG5ncE_g25442045568_0_82.png" alt="Screenshot of a preview of a Jupyter Notebook in a Terra Workspace.  The 'OPEN' button is highlighted." width="100%" />
 ::::
 
 ## Student instructions for launching RStudio

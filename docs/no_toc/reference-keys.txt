@@ -69,8 +69,8 @@ student-instructions-for-cloning-a-workspace
 with-no-variables-set
 with-variables-set
 student-instructions-for-launching-jupyter
-using-default-jupyter-environment
-using-custom-jupyter-environment
+set-audience-to-student-but-dont-specify-details
+set-custom-instructions
 student-instructions-for-launching-rstudio
 using-default-rstudio-environment
 using-custom-rstudio-environment
