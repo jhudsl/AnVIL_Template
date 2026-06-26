@@ -21,6 +21,7 @@ CoV
 CSER
 customizability
 customizations
+dbGaP
 Dementias
 dex
 dexamethasone
@@ -35,6 +36,7 @@ github
 Glimma
 glimmaMDS
 Gmail
+gmail
 GREGoR
 GTEx
 HPRC
