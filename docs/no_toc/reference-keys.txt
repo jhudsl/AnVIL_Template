@@ -78,9 +78,8 @@ user-management
 create-terra-group
 add-member-to-terra-group
 find-group-email
-why-anvil
+why-anvil-details
 why-anvil-for-instructors
-why-use-anvil
 benefits-of-using-anvil-for-research
 ease-of-platform-access
 variety-of-analysis-solutions
