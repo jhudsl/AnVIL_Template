@@ -39,3 +39,11 @@ make-book-txt: true
 # What docker image should be used for rendering?
 # The default is jhudsl/base_ottr:main
 rendering-docker-image: 'jhudsl/base_ottr:main'
+
+######## AnVIL Special ###################################
+# Do not remove this section with OTTR syncs!
+##### Rendering of student guide (if applicable)
+render-student-guide: true
+
+##### Auto-generate a feedback link for the AnVIL Feedback Form: https://docs.google.com/forms/d/e/1FAIpQLScrDVb_utm55pmb_SHx-RgELTEbCCWdLea0T3IzS0Oj00GE4w/viewform
+feedback-link: true
