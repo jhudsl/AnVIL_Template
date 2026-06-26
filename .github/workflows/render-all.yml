@@ -1,5 +1,5 @@
 # Candace Savonen 2021
-# Updated April 2025
+# Updated Nov 2025
 
 name: Render all output courses
 
@@ -12,6 +12,9 @@ on:
       - '*.Rmd'
       - assets/*
       - quizzes/*
+      - '*.yml'
+      - 'GA_Script.html'
+      - 'GA_Script.Rhtml'
 
 jobs:
 
@@ -34,8 +37,8 @@ jobs:
       make_book_txt: "${{ env.MAKE_BOOK_TXT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
       toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
-      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}"
-      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}"
+      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}" # <-- Do not remove with OTTR syncs!
+      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}" # <-- Do not remove with OTTR syncs!
 
   render-course:
     name: Render course preview
@@ -54,7 +57,7 @@ jobs:
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
-    needs: [yaml-check, render-course, render-anvil-special]
+    needs: [yaml-check, render-course, render-anvil-special] # <-- Do not change with OTTR syncs!
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}

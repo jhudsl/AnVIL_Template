@@ -56,8 +56,8 @@ jobs:
       toggle_render_preview: "${{ env.RENDER_PREVIEW }}"
       toggle_dictionary_sort: "${{ env.DICTIONARY_SORT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
-      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}"
-      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}"
+      toggle_feedback_link: "${{ env.FEEDBACK_LINK }}" # <-- Do not remove with OTTR syncs!
+      toggle_student_guide: "${{ env.RENDER_STUDENT_GUIDE }}" # <-- Do not remove with OTTR syncs!
 
 ########################## Make the error reports ##############################
   ottr-reports:
@@ -171,7 +171,7 @@ jobs:
 ############################# Render Preview ###################################
   render-preview:
     name: Render preview
-    needs: [yaml-check, anvil-feedback]
+    needs: [yaml-check, anvil-feedback] # <-- Do not change with OTTR syncs!
     runs-on: ubuntu-latest
     if: ${{needs.yaml-check.outputs.toggle_render_preview == 'true'}}
     permissions:
