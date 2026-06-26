@@ -36,7 +36,7 @@ To clone an AnVIL Workspace:
     
 1. Clone the workspace by clicking the teardrop button (![teardrop button](https://raw.githubusercontent.com/jhudsl/AnVIL_Template/main/child/child_assets/teardrop_button.png){width=25px}). Select "Clone". See the screenshot below on a different Workspace:
 
-    ```{r, echo=FALSE, out.width = '100%', fig.alt='Screenshot showing the teardrop button. The button has been clicked revealing the "clone" option. The Clone option and the teardrop button are highlighted.'}
+    ```{r, echo=FALSE, out.width = '100%', fig.alt="Screenshot showing the teardrop button. The button has been clicked revealing the 'clone' option. The Clone option and the teardrop button are highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1a5Da6qX9BG7Q_6XAz7MvlDyWTvssm2hWwuo1WFJXb_0/edit#slide=id.g117abafa453_0_577")
     ```
 
@@ -48,7 +48,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1a5Da6qX9BG7Q_6XA
     
     See the screenshot below on a different Workspace:
     
-    ```{r, echo=FALSE, out.width = '100%', fig.alt='Screenshot showing the "clone a workspace" popout. The Workspace name, Billing Project, and Clone Workspace button have been filled in and highlighted.'}
+    ```{r, echo=FALSE, out.width = '100%', fig.alt="Screenshot showing the 'clone a workspace' popout. The Workspace name, Billing Project, and Clone Workspace button have been filled in and highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1a5Da6qX9BG7Q_6XAz7MvlDyWTvssm2hWwuo1WFJXb_0/edit#slide=id.g17144dbacd0_0_352")
     ```
 

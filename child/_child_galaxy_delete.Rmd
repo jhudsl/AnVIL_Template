@@ -9,7 +9,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1yYCg4cPVBMMDghT1
 
 Next, click on "Settings". Click on "Delete Environment".
 
-```{r, echo=FALSE, fig.alt='Screenshot of the cloud environment pop out menu. The "Delete Environment" button is highlighted.'}
+```{r, echo=FALSE, fig.alt="Screenshot of the cloud environment pop out menu. The 'Delete Environment' button is highlighted."}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1yYCg4cPVBMMDghT17B4XzROieqyMH99Ex9nMm_Scm9Q/edit#slide=id.ge20e585f11_0_256")
 ```
 

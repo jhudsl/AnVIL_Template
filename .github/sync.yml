@@ -21,6 +21,9 @@ group:
         dest: style-sets
       - source: assets/box_images/
         dest: assets/box_images/
+      - source: assets/AnVIL_Template/
+        dest: assets/AnVIL_Template/
+        deleteOrphaned: true
       - source: assets/AnVIL_style/
         dest: assets/AnVIL_style/
         deleteOrphaned: true
@@ -29,6 +32,8 @@ group:
         deleteOrphaned: true
       - source: assets/itcr_arrow.png
         dest: assets/itcr_arrow.png
+      - source: assets/style_config_default.css
+        dest: assets/style_config_default.css
       - source: assets/style.css
         dest: assets/style.css
       - source: assets/toc_close.css
@@ -49,6 +54,7 @@ group:
       jhudsl/AnVIL_Book_Champions
       jhudsl/AnVIL_Book_Getting_Started
       jhudsl/AnVIL_Book_Instructor_Guide
+      jhudsl/AnVIL_Book_MAGE
       jhudsl/AnVIL_Book_WDL
       jhudsl/AnVIL_CoFests_2024
       jhudsl/AnVIL_Phylogenetic-Techniques
@@ -107,6 +113,7 @@ group:
       jhudsl/AnVIL_Book_Champions
       jhudsl/AnVIL_Book_Getting_Started
       jhudsl/AnVIL_Book_Instructor_Guide
+      jhudsl/AnVIL_Book_MAGE
       jhudsl/AnVIL_Book_WDL
       jhudsl/AnVIL_CoFests_2024
       jhudsl/AnVIL_Phylogenetic-Techniques
