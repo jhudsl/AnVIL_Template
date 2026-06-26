@@ -15,7 +15,7 @@ rmd_files: ["index.Rmd",
             "10-user_management_modules.Rmd",
             "11-why-anvil.Rmd",
             "12-instructor_modules.Rmd",
-            "resources/AnVIL_Template_CollectionStatus_Table.Rmd",
+            "AnVIL_Template_CollectionStatus_Table.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
