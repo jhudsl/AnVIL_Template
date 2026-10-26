@@ -29,6 +29,13 @@ div.borrowed_chunk {
   background-color: #eff7fe;
 }
 
+/* Book title (in top nav bar) */
+.book .book-header h1 {
+    display: block;
+    opacity: 1;
+    color: var(--accent-color);
+}
+
 .hero-image-container {
   height: 100px;
 }
