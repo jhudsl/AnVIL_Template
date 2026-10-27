@@ -36,7 +36,9 @@ create-terra-billing-project
 add-member-to-terra-billing-project
 disable-terra-billing-project
 onboarding
-create-google-account
+create-account
+faqs
+old-create-google-account
 using-programming-platforms-on-anvil
 video-overview-on-using-jupyter-notebooks
 objectives
@@ -62,7 +64,7 @@ data-modules
 getting-data-from-hpc-to-anvil
 student-instructions
 student-account-setup
-create-google-account-1
+create-google-account
 log-in-to-terra
 share-username
 student-instructions-for-cloning-a-workspace
