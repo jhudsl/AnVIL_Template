@@ -10,7 +10,6 @@ Joining a team on AnVIL.
 ```{r, echo = FALSE, results='asis'}
 ottrpal::borrow_chapter(
   doc_path = "child/_child_create_account.Rmd",
-  branch = "new-create-account",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
@@ -24,7 +23,6 @@ This is split out as a separate child doc so that you can choose whether or not 
 ```{r, echo = FALSE, results='asis'}
 ottrpal::borrow_chapter(
   doc_path = "child/_child_create_account_faq.Rmd",
-  branch = "new-create-account",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
