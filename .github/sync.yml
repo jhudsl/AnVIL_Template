@@ -68,9 +68,18 @@ group:
       fhdsl/AnVIL_Researcher_Journey
       fhdsl/AnVIL_Data_Subsetting
       fhdsl/GDSCN_BioDIGS_BGC
+      AnVILTraining/AnVIL_101_Book
 ###ADD NEW REPO HERE following the format above#
 
-# AnVIL repos should sync AnVIL version of _output.yml
+# AnVILTraining repos should sync the AnVILTraining verion of _output.yml
+  - files:
+      - source: style-sets/AnVILTraining/_output.yml
+        dest: _output.yml
+    repos: |
+      AnVILTraining/AnVIL_101_Book
+
+
+# fhdsl AnVIL repos should sync AnVIL version of _output.yml
   - files:
       - source: _output.yml
         dest: _output.yml
