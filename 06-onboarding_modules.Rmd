@@ -4,10 +4,36 @@ Joining a team on AnVIL.
 
 <br>
 
-## Create Google Account
+## Create Account
+
+:::: {.borrowed_chunk}
+```{r, echo = FALSE, results='asis'}
+ottrpal::borrow_chapter(
+  doc_path = "child/_child_create_account.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
+::::
+
+### FAQs
+
+This is split out as a separate child doc so that you can choose whether or not to include it
+
+:::: {.borrowed_chunk}
+```{r, echo = FALSE, results='asis'}
+ottrpal::borrow_chapter(
+  doc_path = "child/_child_create_account_faq.Rmd",
+  repo_name = "jhudsl/AnVIL_Template"
+)
+```
+::::
+
+## [old] Create Google Account
+
+Note that this child doc is considered deprecated. Prefer `_child_create_account.Rmd` going forward.
 
 ```{r, echo = FALSE, results='asis'}
-cow::borrow_chapter(
+ottrpal::borrow_chapter(
   doc_path = "child/_child_google_create_account.Rmd",
   repo_name = "jhudsl/AnVIL_Template"
 )
