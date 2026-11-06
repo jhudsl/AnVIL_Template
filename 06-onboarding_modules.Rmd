@@ -35,6 +35,7 @@ Note that this child doc is considered deprecated. Prefer `_child_create_account
 ```{r, echo = FALSE, results='asis'}
 ottrpal::borrow_chapter(
   doc_path = "child/_child_google_create_account.Rmd",
+  branch = "deprecate-old-account-setup",
   repo_name = "jhudsl/AnVIL_Template"
 )
 ```
