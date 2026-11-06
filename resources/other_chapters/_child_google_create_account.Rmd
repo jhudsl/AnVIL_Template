@@ -1,0 +1,6 @@
+::: {.warning}
+
+Please visit the [AnVIL 101 book](https://training.anvilproject.org/AnVIL_101_Book/account-setup.html) for the most up-to-date instructions regarding account setup.
+
+:::
+
